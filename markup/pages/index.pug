@@ -9,7 +9,12 @@ html(class="no-js", lang="ru")
     +head(head.defaults)
   body.page
     |%=symbols=%
-    +header(header.main)
+
+    .wrap
+      .video_wrap
+        video(src="__static__img/general/video.mp4" autoplay='autoplay', loop='loop', muted='muted') 
+      +header(header.main)
+      +main()
 
     script(src='%=static=%js/separate-js/svg4everybody.min.js')
     script svg4everybody();
