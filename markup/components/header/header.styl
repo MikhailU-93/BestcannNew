@@ -1,0 +1,111 @@
+.header
+  socials = {
+    '1' : '__static__assets/header/social-icon-1.png',
+    '2' : '__static__assets/header/social-icon-2.png',
+    '3' : '__static__assets/header/social-icon-3.png'
+  }
+
+  for i, url in socials
+    &_social:nth-child({i})
+      background-image url(url)
+      
+  &_headLine
+      width 100%
+      border-bottom 1px solid White
+
+  &_wrap
+    display flex
+    align-items center
+    justify-content space-between
+    max-width ContentWidth
+    margin 0 auto
+    padding 10px 0
+
+  &_group
+    display flex
+    align-items center
+
+  &_logo
+    display block
+    width 72px
+    height auto
+
+    object-fit contain
+    object-position center
+
+  &_linkGroup
+    display flex
+    align-items center
+    margin-right 15px
+
+    text-decoration none
+
+    &:last-child
+      margin-right 0
+
+  &_linkIcon
+    display block
+    flex-shrink 0
+    margin-right 10px
+    width 30px
+    height 30px
+    border-radius: 50%
+    border 1px solid White
+
+    background-size 15px auto
+    background-position center
+    background-repeat no-repeat
+    background-image url(__static__assets/header/icon-1.png)
+
+  &_linkGroup:last-child &_linkIcon
+    background-image url(__static__assets/header/icon-2.png)
+
+  &_linkName
+    color White
+    font-size 14px
+    font-weight 700
+
+  &_group
+    display flex
+    align-items center
+
+  &_time
+    display block
+    flex-shrink 0
+    margin-right 15px
+
+  &_socials
+    display flex
+    align-items center
+
+  &_social
+    flex-shrink 0
+    margin-right 10px
+    width 30px
+    height 30px
+    border-radius: 50%
+    border 1px solid White
+
+    background-size 15px auto
+    background-position center
+    background-repeat no-repeat
+
+    &:last-child
+      margin-right 0
+
+  &_nav
+    display flex
+    align-items center
+
+  &_navLink
+    margin-right 30px
+
+    font-family Gilroy
+    color White
+    font-size 14px
+    font-weight 700
+    text-decoration none
+    text-transform uppercase
+
+    &:last-child
+      margin-right 0

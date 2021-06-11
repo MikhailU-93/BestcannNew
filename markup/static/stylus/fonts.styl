@@ -16,3 +16,18 @@
 // Var for using custom font
 $CustomFont: 'CustomFont', Helvetica, Arial, sans-serif;
 */
+
+dir = '../fonts'
+font-face(name = sans-serif, weight = normal, style = normal) 
+  @font-face 
+    font-family name
+    src url('`${dir}/${name}/${name}-${weight}-${style}.woff2`') format('woff2'),
+    url('`${dir}/${name}/${name}-${weight}-${style}.woff`') format('woff')
+    font-weight weight
+    font-style style
+
+font-face(OpenSans, 400, normal)
+
+font-face(Gilroy, 600, normal)
+font-face(Gilroy, 700, normal)
+font-face(Gilroy, 800, normal)

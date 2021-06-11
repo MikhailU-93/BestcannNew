@@ -1,0 +1,24 @@
+mixin header(data)
+  header.header
+    .header_headLine
+      .header_wrap
+        .header_group
+          span.header_time Пн-Вс 09:00-22:00
+          .header_socials
+            each social in data.socials
+              a.header_social(href= social)
+
+        .header_group
+          a.header_linkGroup(href= data.tel)
+            i.header_linkIcon
+            span.header_linkName= data.tel
+          a.header_linkGroup(href= data.mail)
+            i.header_linkIcon
+            span.header_linkName= data.mail
+        
+    .header_wrap
+      img.header_logo(src= data.logo, alt="")
+
+      nav.header_nav
+        each link, index in data.links
+          a.header_navLink(href= index)= link
