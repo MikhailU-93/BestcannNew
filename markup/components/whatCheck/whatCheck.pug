@@ -1,0 +1,10 @@
+mixin whatCheck(data)
+  section.whatCheck
+    .whatCheck_wrap
+      h2.whatCheck_title Что мы проверяем?
+      .whatCheck_items
+        each item in data.items
+          .whatCheck_item
+            span.whatCheck_cloud= item.info
+            img.whatCheck_photo(src= item.photo, alt="")
+            h3.whatCheck_name= item.name

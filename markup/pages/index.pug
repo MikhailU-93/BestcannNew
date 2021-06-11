@@ -4,6 +4,7 @@ html(class="no-js", lang="ru")
   include ../components/head/head.pug
   include ../components/header/header.pug
   include ../components/main/main.pug
+  include ../components/whatCheck/whatCheck.pug
 
   head
     +head(head.defaults)
@@ -15,6 +16,7 @@ html(class="no-js", lang="ru")
         video(src="__static__img/general/video.mp4" autoplay='autoplay', loop='loop', muted='muted') 
       +header(header.main)
       +main()
+    +whatCheck(whatCheck.main)
 
     script(src='%=static=%js/separate-js/svg4everybody.min.js')
     script svg4everybody();

@@ -1,0 +1,100 @@
+.whatCheck
+
+  &_wrap
+    padding 50px 0
+    max-width ContentWidth
+    margin 0 auto
+
+  &_title
+    margin 0 0 80px
+
+    font-size 50px
+    font-family Gilroy
+    font-weight 700
+    color Black
+
+    text-align center
+
+  &_items
+    margin-top 30px
+    display grid
+    grid-template-columns repeat(4, auto)
+
+  &_item
+    position: relative
+  
+    width 220px
+    margin-bottom 40px
+    display flex
+    align-items center
+    flex-direction column
+    border-radius 20px
+
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+
+  &_cloud
+    position absolute
+    top 0
+    left 0
+    transform translate(0, -130%)
+    z-index 100
+
+    display block
+    border-radius 20px
+    padding 15px
+    width 150%
+    box-sizing border-box
+
+    color white
+    background-color grey
+
+    opacity 0
+    visibility hidden
+    transition .3s all
+
+    &::before
+      content ''
+      position absolute
+      left 50px
+      bottom 0
+      transform translate(-50%, 50%) rotate(45deg)
+
+      display block
+      width 10px
+      height 10px
+
+      background-color: grey
+
+  &_item:hover &_cloud
+    opacity 1
+    visibility visible
+
+  &_photo
+    display block
+    width 100%
+    height 170px
+    border-radius 20px 20px 0 0
+
+    object-fit cover
+    object-position center
+
+  &_name
+    position relative
+
+    display block
+    margin 0
+    width 100%
+    height 100%
+    display flex
+    align-items center
+    justify-content center
+    padding 15px 0
+    border-top 1px solid black
+    border-radius 0 0 20px 20px
+
+    text-align center
+    color Black
+    font-weight 700
+    text-decoration underline
+
+    background-color white
