@@ -7,4 +7,5 @@ mixin whatCheck(data)
           .whatCheck_item
             span.whatCheck_cloud= item.info
             img.whatCheck_photo(src= item.photo, alt="")
-            h3.whatCheck_name= item.name
+            span.whatCheck_nameWrap
+              h3.whatCheck_name.subtitle= item.name

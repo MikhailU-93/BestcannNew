@@ -5,9 +5,6 @@
     max-width ContentWidth
     margin 0 auto
 
-  &_title
-    margin 0 0 80px
-
   &_items
     margin-top 30px
     display grid
@@ -39,7 +36,7 @@
     box-sizing border-box
 
     color main-color-1
-    background-color grey
+    background-color main-color-2
 
     opacity 0
     visibility hidden
@@ -56,7 +53,7 @@
       width 10px
       height 10px
 
-      background-color: grey
+      background-color: main-color-2
 
   &_item:hover &_cloud
     opacity 1
@@ -71,23 +68,35 @@
     object-fit cover
     object-position center
 
-  &_name
-    position relative
-
-    display block
-    margin 0
-    width 100%
-    height 100%
+  &_nameWrap
     display flex
     align-items center
     justify-content center
-    padding 15px 0
+    width 100%
+    height 100%
+    box-sizing border-box
+    padding 20px 15px
     border-top 1px solid main-color-2
     border-radius 0 0 15px 15px
 
-    text-align center
-    color main-color-2
-    font-weight 700
-    text-decoration underline
-
     background-color main-color-1
+
+  &_name
+    position relative
+
+    margin 0
+
+    text-align center
+
+    &::before
+      content ''
+      position absolute
+      left 50%
+      bottom -10px
+      transform translate(-50%, 0)
+
+      display block
+      width 70px
+      height 5px
+
+      background-color hover-color

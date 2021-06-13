@@ -19,16 +19,16 @@
     width 500px
     margin-bottom 40px
     display flex
-    border-radius 15px
+    // border-radius 15px
 
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+    // box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
 
   &_photo
     flex-shrink 0
     display block
-    width 220px
-    height 220px
-    border-radius 15px 0 0 15px
+    width 200px
+    height 200px
+    // border-radius 15px 0 0 15px
 
     object-fit cover
     object-position center
@@ -39,7 +39,7 @@
     width 100%
     padding 20px
     box-sizing border-box
-    border-left 1px solid main-color-2
+    //border-left 1px solid main-color-2
 
   &_name
     position relative
@@ -48,12 +48,19 @@
     margin 0
     width 100%
     margin-bottom 20px
+    //background-color main-color-1
 
-    color main-color-2
-    font-weight 700
-    text-decoration underline
+    &::before
+      content ''
+      position absolute
+      left 0
+      bottom -10px
 
-    background-color main-color-1
+      display block
+      width 70px
+      height 5px
+
+      background-color hover-color
 
   &_info
     position relative
