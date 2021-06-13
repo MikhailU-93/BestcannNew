@@ -1,0 +1,9 @@
+mixin whyWe(data)
+  section.whyWe
+    .whyWe_wrap
+      .whyWe_title.title.-darkTheme Почему мы?
+      .whyWe_items
+        each item in data.items
+          .whyWe_item 
+            img.whyWe_icon(src= item.icon, alt="")
+            span.whyWe_info.subtitle.-darkTheme= item.info

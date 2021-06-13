@@ -8,6 +8,7 @@ html(class="no-js", lang="ru")
   include ../components/whatUse/whatUse.pug
   include ../components/services/services.pug
   include ../components/about/about.pug
+  include ../components/whyWe/whyWe.pug
 
 
   head
@@ -24,6 +25,7 @@ html(class="no-js", lang="ru")
     +whatUse(whatUse.main)
     +services(services.main)
     +about(about.main)
+    +whyWe(whyWe.main)
 
     script(src='%=static=%js/separate-js/svg4everybody.min.js')
     script svg4everybody();
