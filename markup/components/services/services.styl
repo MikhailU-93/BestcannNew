@@ -1,0 +1,109 @@
+.services
+  padding 50px 0
+
+  background-color main-color-2
+
+  &_wrap
+    max-width ContentWidth
+    margin 0  auto
+
+  &_items
+    display grid
+    grid-template-columns repeat(3, auto)
+
+  &_item
+    display flex
+    flex-direction column
+    width 350px
+    height auto
+    margin-bottom 40px
+    border-radius 15px
+    overflow hidden
+
+    background-color rgba(55, 211, 211, .6)
+
+    &:nth-child(2)
+       background-color rgba(248, 220, 30, .8)
+
+  &_photoWrap
+    position relative
+
+    display block
+    width 100%
+    height 250px
+
+    &::before
+      content ''
+      position absolute
+      width 100%
+      height 100%
+
+      background-color hover-color
+      opacity .6
+
+  &_photo
+    display block
+    width 100%
+    height 100%
+
+    object-fit cover
+    object-position center
+
+  &_infoGroup
+    display flex
+    flex-direction column
+    width 100%
+    height 100%
+    box-sizing border-box
+    padding 15px
+
+    //background-color rgba(55, 211, 211, .6)
+
+  &_item:nth-child(2) &_photoWrap::before
+    background-color rgba(248, 220, 30, .8)
+
+  &_subtitle
+    position relative
+
+    margin 0 0 30px
+
+    &::before
+      content ''
+      position absolute
+      left 0
+      bottom -10px
+
+      display block
+      width 70px
+      height 5px
+
+      background-color hover-color
+
+  &_info
+    display block
+    width 100%
+    height 100%
+    display flex
+    align-items center
+    justify-content center
+
+  &_footLine
+    width 100%
+    padding 15px
+    margin-top auto
+    box-sizing border-box
+    display flex
+    align-items center
+    justify-content space-between
+
+  &_more,
+  &_formLink
+    display block
+    padding 15px 20px
+    border-radius 10px
+    border 1px solid main-color-1
+
+    text-decoration none
+    color main-color-1
+
+  // &_formLink

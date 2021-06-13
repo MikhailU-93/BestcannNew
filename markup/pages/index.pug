@@ -6,6 +6,7 @@ html(class="no-js", lang="ru")
   include ../components/main/main.pug
   include ../components/whatCheck/whatCheck.pug
   include ../components/whatUse/whatUse.pug
+  include ../components/services/services.pug
   include ../components/about/about.pug
 
 
@@ -21,6 +22,7 @@ html(class="no-js", lang="ru")
       +main()
     +whatCheck(whatCheck.main)
     +whatUse(whatUse.main)
+    +services(services.main)
     +about(about.main)
 
     script(src='%=static=%js/separate-js/svg4everybody.min.js')
