@@ -9,6 +9,7 @@ html(class="no-js", lang="ru")
   include ../components/services/services.pug
   include ../components/about/about.pug
   include ../components/whyWe/whyWe.pug
+  include ../components/buyAuto/buyAuto.pug
 
 
   head
@@ -26,6 +27,7 @@ html(class="no-js", lang="ru")
     +services(services.main)
     +about(about.main)
     +whyWe(whyWe.main)
+    +buyAuto(buyAuto.main)
 
     script(src='%=static=%js/separate-js/svg4everybody.min.js')
     script svg4everybody();

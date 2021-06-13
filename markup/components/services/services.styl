@@ -23,7 +23,10 @@
     background-color rgba(55, 211, 211, .6)
 
     &:nth-child(2)
-       background-color rgba(248, 220, 30, .8)
+      background-color rgba(248, 220, 30, .8)
+
+    &:nth-child(3)
+      background-color rgb( 132, 217, 54, .4)
 
   &_photoWrap
     position relative
@@ -61,6 +64,9 @@
 
   &_item:nth-child(2) &_photoWrap::before
     background-color rgba(248, 220, 30, .8)
+
+  &_item:nth-child(3) &_photoWrap::before
+    background-color rgb( 132, 217, 54, .4)
 
   &_subtitle
     position relative
