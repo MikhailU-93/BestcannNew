@@ -3,7 +3,7 @@ mixin services(data)
     .services_wrap 
       h2.services_title.title.-darkTheme Услуги
       .services_items
-        each item in data.items
+        each item, index in data.items
           .services_item 
             .services_photoWrap 
               img.services_photo(src= item.photo, alt="")
@@ -13,5 +13,5 @@ mixin services(data)
               span.services_info= item.info
 
             .services_footLine
-              a.services_more(href="#") Подробнее
+              a.services_more.popup-link(href=`#popup-service-${index}`) Подробнее
               a.services_formLink Оставить заявку

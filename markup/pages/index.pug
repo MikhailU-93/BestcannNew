@@ -10,7 +10,7 @@ html(class="no-js", lang="ru")
   include ../components/about/about.pug
   include ../components/whyWe/whyWe.pug
   include ../components/buyAuto/buyAuto.pug
-
+  include ../components/popupsServices/popupsServices.pug
 
   head
     +head(head.defaults)
@@ -28,6 +28,8 @@ html(class="no-js", lang="ru")
     +about(about.main)
     +whyWe(whyWe.main)
     +buyAuto(buyAuto.main)
+
+    +popupsServices(services.main)
 
     script(src='%=static=%js/separate-js/svg4everybody.min.js')
     script svg4everybody();

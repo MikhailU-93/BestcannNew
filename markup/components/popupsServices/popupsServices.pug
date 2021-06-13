@@ -1,0 +1,11 @@
+mixin popupsServices(data)
+  section.popupsServices
+    each item, index in data.items
+      .popupsServices_item.popup(id =`popup-service-${index}`)
+        .popupsServices_area.popup-close
+        
+        .popupsServices_content
+          a.popupsServices_close.popup-close(href="#") X
+          img.popupsServices_photo(src= item.photo, alt="")
+          span.popupsServices_title= item.name
+          span.popupsServices_text= item.more
