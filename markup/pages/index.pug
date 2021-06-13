@@ -5,6 +5,8 @@ html(class="no-js", lang="ru")
   include ../components/header/header.pug
   include ../components/main/main.pug
   include ../components/whatCheck/whatCheck.pug
+  include ../components/whatUse/whatUse.pug
+
 
   head
     +head(head.defaults)
@@ -17,6 +19,7 @@ html(class="no-js", lang="ru")
       +header(header.main)
       +main()
     +whatCheck(whatCheck.main)
+    +whatUse(whatUse.main)
 
     script(src='%=static=%js/separate-js/svg4everybody.min.js')
     script svg4everybody();

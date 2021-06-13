@@ -1,0 +1,11 @@
+mixin whatUse(data)
+  section.whatUse
+    .whatUse_wrap
+      h2.whatUse_title.title Что мы используем?
+      .whatUse_items
+        each item in data.items
+          .whatUse_item
+            img.whatUse_photo(src= item.photo, alt="")
+            span.whatUse_infoGroup
+              h3.whatUse_name= item.name
+              span.whatUse_info= item.info

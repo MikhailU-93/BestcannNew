@@ -6,7 +6,7 @@ html, body
 
 .page
   font-family OpenSans
-  color White
+  color main-color-1
   font-size 16px
 
 .wrap
@@ -38,3 +38,28 @@ html, body
   & video
     width 100%
     height auto
+
+.title
+  position relative
+
+  margin 0 0 80px
+
+  font-size 40px
+  font-family Gilroy
+  font-weight 800
+  color main-color-2
+
+  text-align center
+
+  &::before
+    content ''
+    position absolute
+    bottom -20px
+    left 50%
+    transform translate(-50%, 0)
+
+    display block
+    width 200px
+    height 10px
+
+    background-color hover-color
