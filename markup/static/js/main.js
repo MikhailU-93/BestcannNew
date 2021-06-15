@@ -5,3 +5,4 @@
  */
 
 import 'components/popupsServices/popupsServices.js';
+import 'components/whatUse/whatUse.js';
