@@ -2,16 +2,20 @@ mixin services(data)
   section.services
     .services_wrap 
       h2.services_title.title.-darkTheme Услуги
-      .services_items
-        each item, index in data.items
-          .services_item 
-            .services_photoWrap 
-              img.services_photo(src= item.photo, alt="")
+      .services_sliderWrap
+        button.services_btn.-prev
+        button.services_btn.-next
+        .services_slider.swiper-container
+          .services_items.swiper-wrapper
+            each item, index in data.items
+              .services_item.swiper-slide
+                .services_photoWrap 
+                  img.services_photo(src= item.photo, alt="")
 
-            span.services_infoGroup 
-              h3.services_subtitle.subtitle.-darkTheme= item.name
-              span.services_info= item.info
+                span.services_infoGroup 
+                  h3.services_subtitle.subtitle.-darkTheme= item.name
+                  span.services_info= item.info
 
-            .services_footLine
-              a.services_more.popup-link(href=`#popup-service-${index}`) Подробнее
-              a.services_formLink Оставить заявку
+                .services_footLine
+                  a.services_more.popup-link(href=`#popup-service-${index}`) Подробнее
+                  a.services_formLink Оставить заявку

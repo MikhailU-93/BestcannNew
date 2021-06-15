@@ -6,3 +6,4 @@
 
 import 'components/popupsServices/popupsServices.js';
 import 'components/whatUse/whatUse.js';
+import 'components/services/services.js';

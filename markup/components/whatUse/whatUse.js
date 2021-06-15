@@ -1,9 +1,9 @@
-import $ from 'jquery'
+import $ from 'jquery';
 import Swiper from 'swiper';
 
-let swiperWhaUse = new Swiper('.whatUse_slider', {
+const swiperWhaUse = new Swiper('.whatUse_slider', {
   slidesPerView: 3,
-  slidesPerGroup: 3,
+  slidesPerGroup: 1,
   spaceBetween: 80,
   loop: true,
   pagination: {

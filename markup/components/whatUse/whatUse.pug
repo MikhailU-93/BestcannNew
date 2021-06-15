@@ -6,7 +6,6 @@ mixin whatUse(data)
         button.whatUse_btn.-prev
         button.whatUse_btn.-next
         .whatUse_slider.swiper-container
-          .swiper-pagination
           .whatUse_items.swiper-wrapper
             each item in data.items
               .whatUse_item.swiper-slide
@@ -14,3 +13,5 @@ mixin whatUse(data)
                 span.whatUse_infoGroup
                   h3.whatUse_name.subtitle= item.name
                   span.whatUse_info= item.info
+
+          .swiper-pagination

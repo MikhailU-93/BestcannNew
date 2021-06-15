@@ -5,18 +5,46 @@
 
   &_wrap
     max-width ContentWidth
-    margin 0  auto
+    margin 0 auto
+
+  &_title
+    margin 0 0 50px
+
+  &_sliderWrap
+    position relative
+
+    width 100%
+
+  &_btn
+    position absolute
+    top 50%
+    transform translateY(-50%)
+
+    display block
+
+    width 30px
+    height 30px
+
+    background-color main-color-1
+
+    &.-prev
+      left 0
+    
+    &.-next
+      right 0
+
+  &_slider
+    width calc(100% - 100px)
+    padding 50px 0
 
   &_items
-    display grid
-    grid-template-columns repeat(3, auto)
+    display flex
 
   &_item
     display flex
     flex-direction column
     width 350px
     height auto
-    margin-bottom 40px
     border-radius 15px
     overflow hidden
 
