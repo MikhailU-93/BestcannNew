@@ -3,9 +3,9 @@ import Swiper from 'swiper';
 
 let swiperServices = new Swiper('.services_slider', {
   slidesPerView: 3,
-  slidesPerGroup: 3,
+  slidesPerGroup: 1,
   spaceBetween: 20,
-  loop: true,
+  //loop: true,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
