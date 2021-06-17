@@ -1,4 +1,4 @@
-import $ from 'jquery'
+import $ from 'jquery';
 import Swiper from 'swiper';
 
 let swiperServices = new Swiper('.services_slider', {

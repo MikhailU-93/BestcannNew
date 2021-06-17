@@ -1,10 +1,9 @@
-
 .popupsServices
   &_item
     position fixed
     left 0
     top 0
-    z-index 50
+    z-index 105
     
     width 100%
     height 100%
@@ -14,12 +13,12 @@
     padding 30px 10px
     box-sizing border-box
 
-    background-color rgba(0, 0, 0, 0.6)
+    background-color rgba(0, 0, 0, 0.9)
 
     opacity 0
     visibility hidden
 
-    transition .5s all
+    transition .3s all
 
     &.-show
       opacity 1
@@ -36,31 +35,59 @@
   &_content
     position relative
 
-    padding 20px
-    max-width 400px
+    max-width 600px
     max-height 90vh
     box-sizing border-box
-    overflow auto
+    border-radius 15px
+    //overflow auto
 
-    background-color #fff
+    background-color main-color-1
+
+  &_photo
+    display block
+    width 100%
+    height 300px
+    border-radius 15px 15px 0 0
+
+    object-fit cover
+    object-position center
 
   &_close
     position absolute
-    right 10px
-    top 10px
+    right -20px
+    top 5px
 
     font-size 20px
     text-decoration none
-    color #000
+    color main-color-1
+
+  &_infoGroup
+    display block
+    padding 20px
 
   &_title
-    display block
-    margin-bottom 20px
+    position relative
 
-    font-size 35px
-    color black
+    display block
+    margin 0 0 20px
+
+    font-family Gilroy
+    color main-color-2
+
+    &::before
+      content ''
+      position absolute
+      left 0
+      bottom -10px
+
+      display block
+      width 70px
+      height 5px
+
+      background-color hover-color
 
   &_text
     display block
     
-    font-size 25px
+    color main-color-2
+    font-size 18px

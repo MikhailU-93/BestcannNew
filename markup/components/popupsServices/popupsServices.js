@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-const popupLink = $(".popup-link");
+const popupLink = $('.services_item').find(".popup-link");
 const popupCloseEl = $(".popup-close");
 let unlock = true;
 

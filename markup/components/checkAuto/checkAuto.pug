@@ -1,5 +1,5 @@
 mixin checkAuto(data)
-  section.checkAuto(id='checkAuto')
+  section.checkAuto.section(id='checkAuto')
     .checkAuto_wrap
       h2.checkAuto_title.title Проверка автомобиля
 
@@ -20,8 +20,8 @@ mixin checkAuto(data)
             label.checkAuto_label(for="vin-input") Vin-код:
             input.checkAuto_input(id="vin-input", type="text", placeholder="X7L5SRATG52858474", name="Vin" maxlength="17")
           .checkAuto_inputGroup
-            label.checkAuto_label(for="link-input") Ссылка на желаемый автомобиль:
-            input.checkAuto_input(id="link-input", type="url", placeholder="http://vashsite.ru", name="Link")
+            label.checkAuto_label(for="link-input") <strong>*</strong> Ссылка на желаемый автомобиль:
+            input.checkAuto_input(id="link-input", type="url", placeholder="http://vashsite.ru", name="Link" required)
 
           button.checkAuto_btn.formLink(type="submit") Отправить
       

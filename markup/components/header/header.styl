@@ -5,14 +5,10 @@ socials = {
 }
 
 .header
-  // position fixed
-  // top 0
-  // left 0
-  // z-index 100
+  position relative
 
   width 100%
-  //height 100%
-  transition .2s all
+  transition .2s alls
 
   &.-darkTheme
     background-color main-color-2
@@ -113,6 +109,11 @@ socials = {
       margin-right 0
 
   &_nav
+    position absolute
+    top 100%
+    left 0
+    //transform translateY(-100%)
+
     width 100%
 
     &.-sticky
@@ -120,8 +121,6 @@ socials = {
       left 0
       top 0
       z-index 100
-
-      width 100%
 
       background-color main-color-2
 
@@ -150,6 +149,7 @@ socials = {
 
     transition .2s all
 
+    &.-active,
     &:hover
       color hover-color
 
