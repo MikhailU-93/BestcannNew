@@ -16,6 +16,8 @@ $('body').on('click', '.js-scroll-to', function (e) {
 // $(document).scroll(function () {
 //   $('.header_mobileNav').removeClass('-active');
 // });
+const navLink = $('.header_navLink');
+navLink.eq(0).addClass('-active');
 
 $(document).on('scroll', function() {
   let docScroll = $(document).scrollTop();
@@ -23,12 +25,11 @@ $(document).on('scroll', function() {
   let sumOfheights = 0;
 
   for (let i = 0; i < sections.length; i++) {
-    //$('.header_navLink').eq(i).addClass('-active');
     sumOfheights += sections.eq(i).innerHeight();
 
     if (docScroll <= sumOfheights - 300) {
-      $('.header_navLink').removeClass('-active');
-      $('.header_navLink').eq(i).addClass('-active');
+      navLink.removeClass('-active');
+      navLink.eq(i).addClass('-active');
       break;
     }
   }
