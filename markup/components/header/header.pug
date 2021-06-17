@@ -16,8 +16,8 @@ mixin header(data)
           a.header_linkGroup(href= data.mail)
             i.header_linkIcon
             span.header_linkName= data.mail
-        
-    .header_wrap
-      nav.header_nav
-        each link, index in data.links
-          a.header_navLink.js-scroll-to(href= index)= link
+    .header_nav
+      .header_navWrap
+        nav.header_links
+          each link, index in data.links
+            a.header_navLink.js-scroll-to(href= index)= link

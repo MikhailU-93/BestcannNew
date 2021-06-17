@@ -16,12 +16,17 @@ $('body').on('click', '.js-scroll-to', function (e) {
 // $(document).scroll(function () {
 //   $('.header_mobileNav').removeClass('-active');
 // });
+const headerHeight = $('.header_headLine').innerHeight();
+const nav = $('.header_nav');
+console.log(headerHeight);
 
-$(window).on('scroll', function() {
-  console.log()
-  if ($(window).scrollTop() > 120) {
-    $('.header').addClass('-darkTheme');
+$(document).on('scroll', function() {
+  let docScroll = $(document).scrollTop();
+  //console.log(docScroll);
+
+  if (docScroll > headerHeight) {
+    nav.addClass('-sticky');
   } else {
-    $('.header').removeClass('-darkTheme')
+    nav.removeClass('-sticky')
   }
 });
