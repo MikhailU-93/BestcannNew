@@ -1,10 +1,11 @@
 mixin services(data)
-  section.services
+  section.services(id='services')
     .services_wrap 
       h2.services_title.title.-darkTheme Услуги
       .services_sliderWrap
-        button.services_btn.-prev
-        button.services_btn.-next
+        != pugHelpers.Icon.call(locals, {iconName: 'arrow-left', className: 'services_btn -prev', iconWidth: '35', iconHeight: '75'})
+        
+        != pugHelpers.Icon.call(locals, {iconName: 'arrow-right', className: 'services_btn -next', iconWidth: '30', iconHeight: '20'})
         .services_slider.swiper-container
           .services_items.swiper-wrapper
             each item, index in data.items

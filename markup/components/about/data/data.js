@@ -1,7 +1,7 @@
 data = {
   about: {
     main: {
-      photo: '__static__img/assets/about/businessman.png',
+      photo: '__static__img/assets/about/photo.png',
     }
   }
 };

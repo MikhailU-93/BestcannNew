@@ -12,28 +12,39 @@ socials = {
 
   width 100%
   //height 100%
+  transition .2s all
+
+  &.-darkTheme
+    background-color main-color-2
 
   for i, url in socials
     &_social:nth-child({i})
       background-image url(url)
       
   &_headLine
-      width 100%
-      border-bottom 1px solid main-color-1
+    width 100%
+    border-bottom 1px solid main-color-1
 
   &_wrap
+    position relative
+
     display flex
     align-items center
     justify-content space-between
     max-width ContentWidth
     margin 0 auto
-    padding 10px 0
+    padding 20px 0
 
   &_group
     display flex
     align-items center
 
   &_logo
+    position absolute
+    left 50%
+    top 50%
+    transform translate(-50%, -50%)
+
     display block
     width 72px
     height auto
@@ -104,6 +115,8 @@ socials = {
   &_nav
     display flex
     align-items center
+    justify-content space-between
+    width 100%
 
   &_navLink
     margin-right 30px
