@@ -1,65 +1,52 @@
-.checkAuto
-  padding 80px 0 50px
+.form
+  display flex
+  align-items center
+  flex-direction column
+  max-width 450px
+  width 100%
+  padding 20px
+  box-sizing border-box
+  border-radius 15px
 
-  &_wrap
-    max-width ContentWidth
-    margin 0 auto
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
 
-  &_subtitle
+  &_logo
     display block
+    width 80px
+    height auto
     margin-bottom 30px
-
-    color main-color-2
-    font-size 22px
-    font-weight 700
-    text-align center
-
-  &_notice
-    display block
-    margin-bottom 50px
-
-    color rgba(0, 0, 0, .3)
-    font-size 16px
-    text-align center
-
-  &_main
-    width 100%
-    max-width 1000px
-    margin 0 auto 50px
-    display flex
-    align-items center
-    justify-content space-between
-
-  &_pic
-    display block
-    width 447px
-    height 332px
 
     object-fit contain
     object-position center
 
-  &_form
+  &_title
+    margin-bottom 40px
+
+    text-align center
+
+  &_main
     display flex
     flex-direction column
     align-items center
-    max-width 400px
     width 100%
     box-sizing border-box
-    padding 20px
-    border-radius 15px
+    
     overflow hidden
 
     background-color main-color-1
 
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
-
-
   &_inputGroup
-    width 100%
-    margin-bottom 20px
+    width 48%
 
     &:last-child
       margin-bottom 0
+
+  &_line
+    display flex
+    align-items center
+    justify-content space-between
+    width 100%
+    margin-bottom 20px
 
   &_label
     display flex
@@ -102,3 +89,4 @@
     
     color red
     text-align center
+

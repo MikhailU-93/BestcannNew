@@ -1,5 +1,13 @@
 mixin popupsServices(data)
   section.popupsServices
+    
+    .popupsServices_item.popup(id ="main-form")
+      .popupsServices_area.popup-close
+      
+      .popupsServices_content
+        a.popupsServices_close.popup-close(href="#") X
+        +form()
+        
     each item, index in data.items
       .popupsServices_item.popup(id =`popup-service-${index}`)
         .popupsServices_area.popup-close
@@ -10,3 +18,5 @@ mixin popupsServices(data)
           span.popupsServices_infoGroup
             h3.popupsServices_title= item.name
             span.popupsServices_text= item.more
+
+          
