@@ -1,0 +1,15 @@
+mixin mainForm(data)
+  .mainForm(id="main-form")
+    img.mainForm_logo(src="__static__img/assets/header/logo.png", alt="")
+
+    h3.mainForm_title.subtitle Заголовок для формы отправки заявки
+
+    form.mainForm_main(action="")
+      .mainForm_inputGroup
+        label.mainForm_label(for="name-input") Ваше имя:
+        input.mainForm_input(id="name-input", type="text", placeholder="Владимир", name="Name", maxlength="15")
+      .mainForm_inputGroup
+        label.mainForm_label(for="tel-input") <strong>*</strong> Ваш телефон:
+        input.mainForm_input(id="tel-input", type="tel", placeholder="+79509509595", name="Tel" required)
+
+      button.mainForm_btn.formLink(type="submit") Отправить
