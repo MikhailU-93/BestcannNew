@@ -1,21 +1,8 @@
 mixin header(data)
   header.header(id="main")
     .header_headLine
-      .header_wrap
-        img.header_logo(src= data.logo, alt="")
-        .header_group
-          span.header_time Пн-Вс 09:00-22:00
-          .header_socials
-            each social in data.socials
-              a.header_social(href= social)
-
-        .header_group
-          a.header_linkGroup(href= data.tel)
-            i.header_linkIcon
-            span.header_linkName= data.tel
-          a.header_linkGroup(href= data.mail)
-            i.header_linkIcon
-            span.header_linkName= data.mail
+      +socialsLine(socialsLine.main)
+      
       .header_nav
         .header_navWrap
           nav.header_links

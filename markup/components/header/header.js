@@ -27,7 +27,7 @@ $(document).on('scroll', function() {
   for (let i = 0; i < sections.length; i++) {
     sumOfheights += sections.eq(i).innerHeight();
 
-    if (docScroll <= sumOfheights - 300) {
+    if (docScroll <= sumOfheights - 200) {
       navLink.removeClass('-active');
       navLink.eq(i).addClass('-active');
       break;

@@ -1,0 +1,190 @@
+socials = {
+  '1' : '__static__assets/socialsLine/social-icon-1.png',
+  '2' : '__static__assets/socialsLine/social-icon-2.png',
+  '3' : '__static__assets/socialsLine/social-icon-3.png'
+}
+
+hoverSocials = {
+  '1' : '__static__assets/socialsLine/hover-social-icon-1.png',
+  '2' : '__static__assets/socialsLine/hover-social-icon-2.png',
+  '3' : '__static__assets/socialsLine/hover-social-icon-3.png'
+}
+
+.socialsLine
+  position relative
+
+  width 100%
+  transition .2s all
+
+  for i, url in socials
+    &_social:nth-child({i})
+      background-image url(url)
+
+  for i, url in hoverSocials
+    &_social:nth-child({i})::before
+      background-image url(url)
+      
+  &_headLine
+    width 100%
+    border-bottom 1px solid main-color-1
+
+  &_wrap
+    position relative
+
+    display flex
+    align-items center
+    justify-content space-between
+    max-width ContentWidth
+    margin 0 auto
+    padding 20px 0
+
+  &_group
+    display flex
+    align-items center
+
+  &_logo
+    position absolute
+    left 50%
+    top 50%
+    transform translate(-50%, -50%)
+
+    display block
+    width 72px
+    height auto
+
+    object-fit contain
+    object-position center
+
+  &_linkGroup
+    display flex
+    align-items center
+    margin-right 15px
+
+    text-decoration none
+
+    &:last-child
+      margin-right 0
+
+  &_linkIcon
+    position relative
+
+    display block
+    flex-shrink 0
+    margin-right 10px
+    width 30px
+    height 30px
+    border-radius: 50%
+    border 1px solid main-color-1
+
+    transition .2s all
+
+    background-size 15px auto
+    background-position center
+    background-repeat no-repeat
+    background-image url(__static__assets/socialsLine/icon-1.png)
+
+    &::before
+      content ''
+      position absolute
+      top 0
+      left 0
+
+      width 100%
+      height 100%
+      border 1px solid transparent
+      box-sizing border-box
+      border-radius: 50%
+
+      opacity 0
+      visibility hidden
+
+      transition .2s all
+
+      background-image url(__static__assets/socialsLine/hover-icon-1.png)      
+      background-size 15px auto
+      background-position center
+      background-repeat no-repeat
+
+  &_linkGroup:last-child &_linkIcon
+    background-image url(__static__assets/socialsLine/icon-2.png)
+
+    &::before
+      background-image url(__static__assets/socialsLine/hover-icon-2.png)
+
+  &_linkGroup:hover &_linkIcon
+    border 1px solid hover-color
+
+    &::before
+      opacity 1
+      visibility visible
+
+  &_linkName
+    color main-color-1
+    font-size 14px
+    font-weight 700
+
+    transition .2s all
+
+  &_linkGroup:hover &_linkName
+    color hover-color
+
+  &_group
+    display flex
+    align-items center
+
+  &_time
+    display block
+    flex-shrink 0
+    margin-right 15px
+
+  &_socials
+    display flex
+    align-items center
+
+  &_social
+    position relative
+
+    flex-shrink 0
+    margin-right 10px
+    width 30px
+    height 30px
+    box-sizing border-box
+    border-radius: 50%
+    border 1px solid main-color-1
+
+    transition .2s all
+
+    background-size 15px auto
+    background-position center
+    background-repeat no-repeat
+
+    &:hover
+      border 1px solid hover-color
+
+    &:hover::before
+      opacity 1
+      visibility visible
+
+    &::before
+      content ''
+      position absolute
+      top 0
+      left 0
+
+      width 100%
+      height 100%
+      border 1px solid transparent
+      box-sizing border-box
+      border-radius: 50%
+
+      opacity 0
+      visibility hidden
+
+      transition .2s all
+      
+      background-size 15px auto
+      background-position center
+      background-repeat no-repeat
+
+    &:last-child
+      margin-right 0
