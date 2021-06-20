@@ -1,11 +1,11 @@
 import $ from 'jquery';
-import Swiper from 'swiper';
 
 const swiperWhaUse = new Swiper('.whatUse_slider', {
   slidesPerView: 3,
   slidesPerGroup: 3,
   spaceBetween: 80,
   loop: true,
+  speed: 500,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,

@@ -9,6 +9,24 @@ html, body
   color main-color-1
   font-size 16px
 
+  & .swiper-pagination
+    bottom 0
+
+    & .swiper-pagination-bullet
+      width 12px
+      height 12px
+      margin 0 6px
+
+    & .swiper-pagination-bullet-active
+      background-color hover-color
+
+    &.-darkTheme
+      & .swiper-pagination-bullet
+        background-color main-color-1
+
+      & .swiper-pagination-bullet-active
+        background-color hover-color
+
 .wrap
   position relative
 

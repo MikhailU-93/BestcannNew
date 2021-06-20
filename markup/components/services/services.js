@@ -1,11 +1,11 @@
 import $ from 'jquery';
-import Swiper from 'swiper';
 
 let swiperServices = new Swiper('.services_slider', {
   slidesPerView: 3,
-  slidesPerGroup: 1,
+  slidesPerGroup: 3,
   spaceBetween: 20,
-  //loop: true,
+  loop: true,
+  speed: 500,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
