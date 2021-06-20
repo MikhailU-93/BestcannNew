@@ -3,34 +3,32 @@ data = {
     main: {
       items: [
         {
-          photo: ['__static__img/assets/services/3.png', '__static__img/assets/services/3.png', '__static__img/assets/services/3.png', '__static__img/assets/services/3.png'],
-          name: 'Двигатель Двигатель Двигатель Двигатель Двигатель',
+          photo: ['__static__img/assets/comments/photo-1.jpg', '__static__img/assets/comments/photo-2.jpg', '__static__img/assets/comments/photo-3.png', '__static__img/assets/comments/photo-4.png'],
+          desc: 'Марка, модель, описание(жирным)',
+          for: 'для Михаила',
           info: 'Вы подбираете 5-7 вариантов, которые вам нравятся, и осматриваете их вместе со',
-          comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ut velit mollitia impedit eos, nesciunt veritatis asperiores dolores commodi, recusandae a expedita reprehenderit quibusdam qui! Culpa quae cumque magni quidem?'
+          comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ut velit mollitia impedit eos, nesciunt veritatis asperiores dolores commodi, recusandae a expedita reprehenderit quibusdam qui! Culpa quae cumque magni'
         },
         {
-          photo: '__static__img/assets/services/3.png',
-          name: 'Двигатель Двигатель',
-          info: 'Совершим поиск авто по Вашим критериям самостоятельно и найдем лучший автомобиль для Вас за предложенный бюджет. Произведем все необходимые проверки от А до Я.',
-          more: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ut velit mollitia impedit eos, nesciunt veritatis asperiores dolores commodi, recusandae a expedita reprehenderit quibusdam qui! Culpa quae cumque magni quidem?'
+          photo: ['__static__img/assets/comments/photo-1.jpg', '__static__img/assets/comments/photo-2.jpg', '__static__img/assets/comments/photo-3.png', '__static__img/assets/comments/photo-4.png'],
+          desc: 'Марка, модель, описание(жирным)',
+          for: 'для Михаила',
+          info: 'Вы подбираете 5-7 вариантов, которые вам нравятся, и осматриваете их вместе со',
+          comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ut velit mollitia impedit eos, nesciunt veritatis asperiores dolores commodi, recusandae a expedita reprehenderit quibusdam qui! Culpa quae cumque magni quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ut velit mollitia impedit eos, nesciunt veritatis asperiores dolores commodi, recusandae a expedita reprehenderit quibusdam qui! Culpa quae cumque magni quidem?'
         },
         {
-          photo: '__static__img/assets/services/3.png',
-          name: 'Двигатель',
-          info: 'Осмотр кузова на ремонты',
-          more: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ut velit mollitia impedit eos, nesciunt veritatis asperiores dolores commodi, recusandae a expedita reprehenderit quibusdam qui! Culpa quae cumque magni quidem?'
+          photo: ['__static__img/assets/comments/photo-1.jpg', '__static__img/assets/comments/photo-2.jpg', '__static__img/assets/comments/photo-3.png', '__static__img/assets/comments/photo-4.png'],
+          desc: 'Марка, модель, описание(жирным)',
+          for: 'для Михаила',
+          info: 'Вы подбираете 5-7 вариантов, которые вам нравятся, и осматриваете их вместе со',
+          comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ut velit mollitia impedit eos, nesciunt veritatis asperiores dolores commodi, recusandae a expedita reprehenderit quibusdam qui! Culpa quae cumque magni quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ut velit mollitia impedit eos, nesciunt'
         },
         {
-          photo: '__static__img/assets/services/3.png',
-          name: 'Двигатель',
-          info: 'Осмотр кузова на ремонты',
-          more: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ut velit mollitia impedit eos, nesciunt veritatis asperiores dolores commodi, recusandae a expedita reprehenderit quibusdam qui! Culpa quae cumque magni quidem?'
-        },
-        {
-          photo: '__static__img/assets/services/3.png',
-          name: 'Двигатель',
-          info: 'Осмотр кузова на ремонты',
-          more: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ut velit mollitia impedit eos, nesciunt veritatis asperiores dolores commodi, recusandae a expedita reprehenderit quibusdam qui! Culpa quae cumque magni quidem?'
+          photo: ['__static__img/assets/comments/photo-1.jpg', '__static__img/assets/comments/photo-2.jpg', '__static__img/assets/comments/photo-3.png', '__static__img/assets/comments/photo-4.png'],
+          desc: 'Марка, модель, описание(жирным)',
+          for: 'для Михаила',
+          info: 'Вы подбираете 5-7 вариантов, которые вам нравятся, и осматриваете их вместе со',
+          comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ut velit mollitia impedit eos, nesciunt veritatis asperiores dolores commodi, recusandae a expedita reprehenderit'
         },
       ]
     }

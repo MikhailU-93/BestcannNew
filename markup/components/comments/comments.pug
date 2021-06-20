@@ -2,24 +2,29 @@ mixin comments(data)
   section.comments.section(id="comments")
     .comments_wrap
       h2.comments_title.title Отзывы
+
       .comments_sliderWrap
         != pugHelpers.Icon.call(locals, {iconName: 'arrow-left', className: 'comments_btn -prev', iconWidth: '35', iconHeight: '75'})
         
         != pugHelpers.Icon.call(locals, {iconName: 'arrow-right', className: 'comments_btn -next', iconWidth: '30', iconHeight: '20'})
         .comments_slider.swiper-container
           .comments_items.swiper-wrapper
-            .comments_item.swiper-slide
-              .comments_photosWrap
-                .comments_mainPhoto
-                  img.comments_photo(src="__static__img/assets/comments/photo.jpg", alt="")
-                .comments_previews
-                  img.comments_preview(src="__static__img/assets/comments/photo.jpg", alt="")
-                  img.comments_preview(src="__static__img/assets/comments/photo.jpg", alt="")
-              .comments_info
-                span.comments_desc.subtitle Марка, модель, описание(жирным)
+            each item in data.items
+              .comments_item.swiper-slide
+                .comments_photosWrap
+                  .comments_mainPhoto
+                    each photo in item.photo
+                      img.comments_photo(src= photo, alt="")
+                  .comments_previews
+                    each preview in item.photo
+                      img.comments_preview(src= preview, alt="")
+                .comments_info
+                  span.comments_desc.subtitle= item.desc 
 
-                span.comments_for для Михаила
+                  span.comments_for= item.for
 
-                span.comments_subtitle.subtitle Отзыв:(жирным)
+                  span.comments_subtitle.subtitle Отзыв:(жирным)
 
-                span.comments_text Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ut velit mollitia impedit eos, nesciunt veritatis asperiores dolores commodi, recusandae a expedita reprehenderit quibusdam qui! Culpa quae cumque magni quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ut velit mollitia impedit eos, nesciunt veritatis asperiores dolores commodi, recusandae a expedita reprehenderit quibusdam qui! Culpa quae cumque magni quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ut velit mollitia impedit eos, nesciunt veritatis asperiores dolores commodi, recusandae a expedita reprehenderit quibusdam qui! Culpa quae cumque magni quidem?
+                  span.comments_text= item.comment
+
+          .swiper-pagination
