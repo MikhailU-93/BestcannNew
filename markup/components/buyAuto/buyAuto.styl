@@ -4,6 +4,9 @@
   @media (max-width bTablet)
     padding 60px 0 40px
 
+  @media (max-width bSmallTablet)
+    padding 50px 0 30px
+
   &_wrap
     max-width ContentWidth
     margin 0 auto
@@ -11,10 +14,17 @@
     @media (max-width bTablet)
       max-width tabletWidth
 
+    @media (max-width bSmallTablet)
+      max-width smallTabletWidth
+
   &_items
     width 100%
     display flex
     justify-content space-between
+
+    @media (max-width bSmallTablet)
+      flex-wrap wrap
+      justify-content space-evenly
 
   &_item
     width 180px
@@ -26,6 +36,9 @@
     @media (max-width bTablet)
       width 160px
       margin-bottom 30px
+
+    @media (max-width bSmallTablet)
+      width 200px
 
   &_icon
     width 100px

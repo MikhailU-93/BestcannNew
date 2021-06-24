@@ -17,6 +17,12 @@
 
     background-position -400px 100%
 
+  @media (max-width bSmallTablet)
+    padding 50px 0 30px
+
+    background-size 600px 450px
+    background-position 0 100px
+
   &_wrap
     max-width ContentWidth
     margin 0 auto
@@ -24,6 +30,9 @@
 
     @media (max-width bTablet)
       max-width tabletWidth
+
+    @media (max-width bSmallTablet)
+      max-width smallTabletWidth
 
   &_main
     display flex
@@ -35,6 +44,10 @@
 
     @media (max-width bTablet)
       padding-left 50px
+
+    @media (max-width bSmallTablet)
+      padding 0
+      flex-direction column
       
 
   &_infoGroup
@@ -42,6 +55,9 @@
     display flex
     flex-direction column
     align-items flex-end
+
+    @media (max-width bSmallTablet)
+      align-items center
 
   &_info
     display block
@@ -54,6 +70,13 @@
 
     @media (max-width bTablet)
       font-size 18px
+      line-height 24px
+
+    @media (max-width bSmallTablet)
+      text-align center
+      font-size 17px
+      line-height 22px
+
 
     & p
       &:first-child
@@ -67,3 +90,8 @@
     display block
     width 270px
     height 605px
+
+    @media (max-width bSmallTablet)
+      width 162px
+      height 365px
+      margin-bottom 30px

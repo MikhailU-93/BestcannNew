@@ -11,12 +11,18 @@
 
     background-size 50%
 
+  @media (max-width bSmallTablet)
+    padding 50px 0 30px
+
   &_wrap
     max-width ContentWidth
     margin 0 auto
 
     @media (max-width bTablet)
       max-width tabletWidth
+    
+    @media (max-width bSmallTablet)
+      max-width smallTabletWidth
 
   &_title
     margin 0 0 50px
@@ -88,6 +94,9 @@
       width 250px
 
       box-shadow: 0 12px 24px rgba(0,0,0,0.25), 0 8px 8px rgba(0,0,0,0.22)
+
+    @media (max-width bSmallTablet)
+      box-shadow: 0 10px 21px rgba(0,0,0,0.25), 0 7px 7px rgba(0,0,0,0.22)  
 
   &_photo
     display block

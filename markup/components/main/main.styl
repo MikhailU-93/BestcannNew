@@ -1,6 +1,10 @@
 .main
   //padding 250px 0
   height 100%
+  box-sizing border-box
+
+  @media (max-width bSmallTablet)
+    padding-top 60px
 
   &_wrap
     max-width ContentWidth
@@ -13,6 +17,9 @@
     @media (max-width bTablet)
       max-width tabletWidth
 
+    @media (max-width bSmallTablet)
+      max-width smallTabletWidth
+
   &_titleGroup
     display flex
     align-items center
@@ -21,6 +28,9 @@
 
     @media (max-width bTablet)
       max-width 800px
+
+    @media (max-width bSmallTablet)
+      max-width 600px
 
   &_title
     margin 0 0 30px
@@ -39,6 +49,9 @@
     @media (max-width bTablet)
       font-size 40px
 
+    @media (max-width bSmallTablet)
+      font-size 35px
+
   &_subtitle
     margin-bottom 60px
     display block
@@ -54,6 +67,9 @@
 
     @media (max-width bTablet)
       font-size 18px
+
+    @media (max-width bSmallTablet)
+      font-size 17px
 
   &_link
     // transition .2s all

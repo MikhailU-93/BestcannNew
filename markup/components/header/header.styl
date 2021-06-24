@@ -3,6 +3,16 @@
 
   width 100%
   transition .2s all
+
+  @media (max-width bSmallTablet)
+    position fixed
+    left 0
+    top 0
+    z-index 100
+
+    border-bottom 1px solid main-color-1
+
+    background-color main-color-2
       
   &_headLine
     width 100%
@@ -16,6 +26,18 @@
 
     width 100%
 
+    transition .2s all
+
+    @media (max-width bSmallTablet)
+      z-index 100
+
+      border-bottom 1px solid main-color-1
+
+      background-color main-color-2
+
+      opacity 0
+      visibility hidden
+
     &.-sticky
       position fixed
       left 0
@@ -26,6 +48,10 @@
 
       background-color main-color-2
 
+    &.-active
+      opacity 1
+      visibility visible
+
   &_navWrap
     max-width ContentWidth
     margin 0 auto
@@ -35,11 +61,18 @@
       padding 15px 0
       max-width tabletWidth
 
+    @media (max-width bSmallTablet)
+      padding 20px 0
+      margin 0
+
   &_links
     display flex
     align-items center
     justify-content space-between
     width 100%
+
+    @media (max-width bSmallTablet)
+      flex-direction column
 
   &_navLink
     position relative
@@ -59,6 +92,11 @@
       margin-right 20px
 
       font-size 13px
+
+    @media (max-width bSmallTablet)
+      margin 0 0 25px
+
+      font-size 14px
 
     &.-active,
     &:hover
@@ -90,3 +128,32 @@
 
     &:last-child
       margin-right 0
+
+      @media (max-width bSmallTablet)
+        margin 0
+
+  &_back
+    position fixed
+    top 0
+    right 0
+    bottom 0
+    left 0
+    z-index 99
+
+    display none
+
+    background-color rgba(0, 0, 0, 0.7)
+
+    &.-active
+      display block
+
+  &_close
+    position absolute
+    right 15px
+    top 15px
+
+    cursor pointer
+
+    font-size 18px
+
+      

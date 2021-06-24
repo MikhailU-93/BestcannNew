@@ -4,6 +4,9 @@
   @media (max-width bTablet)
     padding 60px 0
 
+  @media (max-width bSmallTablet)
+    padding 50px 0
+
   &_wrap
     max-width ContentWidth
     margin 0 auto
@@ -11,11 +14,17 @@
     @media (max-width bTablet)
       max-width tabletWidth
 
+    @media (max-width bSmallTablet)
+      max-width smallTabletWidth
+
   &_title
     margin 0 0 50px
 
     @media (max-width bTablet)
       margin 0 0 40px
+
+    @media (max-width bSmallTablet)
+      margin 0 0 30px
 
   &_sliderWrap
     position relative
@@ -63,6 +72,10 @@
       padding 40px 25px
       width calc(100% - 80px)
 
+    @media (max-width bSmallTablet)
+      padding 30px 20px 40px
+      width calc(100% - 50px)
+
   &_item
     display flex
     margin 0 auto
@@ -79,6 +92,11 @@
     @media (max-width bTablet)
       box-shadow: 0 12px 24px rgba(0,0,0,0.25), 0 8px 8px rgba(0,0,0,0.22)
 
+    @media (max-width bSmallTablet)
+      padding 15px
+
+      box-shadow: 0 10px 21px rgba(0,0,0,0.25), 0 7px 7px rgba(0,0,0,0.22)      
+
   &_photosWrap
     flex-shrink 0
     max-width 450px
@@ -89,6 +107,10 @@
     @media (max-width bTablet)
       max-width 375px
       height 275px
+
+    @media (max-width bSmallTablet)
+      max-width 300px
+      height 230px
 
   &_mainPhoto
     flex-shrink 0
@@ -145,6 +167,9 @@
 
     @media (max-width bTablet)
       height 275px
+
+    @media (max-width bSmallTablet)
+      height 230px
 
   &_desc
     display block

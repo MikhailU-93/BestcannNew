@@ -11,6 +11,9 @@
 
     background-size 50%
 
+  @media (max-width bSmallTablet)
+    padding 50px 0 30px
+
   &_wrap
     max-width ContentWidth
     margin 0 auto
@@ -18,10 +21,16 @@
     @media (max-width bTablet)
       max-width tabletWidth
 
+    @media (max-width bSmallTablet)
+      max-width smallTabletWidth
+
   &_items
     margin-top 30px
     display grid
     grid-template-columns repeat(4, auto)
+
+    @media (max-width bSmallTablet)
+      grid-template-columns repeat(3, auto)
 
   &_item
     position: relative
@@ -33,11 +42,16 @@
     flex-direction column
     border-radius 15px
 
+    background-color main-color-1
+
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
 
     @media (max-width bTablet)
       width 200px
       margin-bottom 30px
+
+    @media (max-width bSmallTablet)
+      box-shadow: 0 10px 21px rgba(0,0,0,0.25), 0 7px 7px rgba(0,0,0,0.22)
 
   &_cloud
     position absolute
@@ -58,6 +72,9 @@
     opacity 0
     visibility hidden
     transition .3s all
+
+    @media (max-width bSmallTablet)
+      padding 13px
 
     &::before
       content ''
@@ -90,10 +107,9 @@
 
   &_nameWrap
     display flex
-    align-items center
     justify-content center
     width 100%
-    height 100%
+    height auto
     box-sizing border-box
     padding 20px 15px
     border-top 1px solid main-color-2
@@ -104,10 +120,14 @@
     @media (max-width bTablet)
       padding 18px 13px
 
+    @media (max-width bSmallTablet)
+      padding 16px 12px
+
   &_name
     position relative
 
     margin 0
+    height 100%
 
     text-align center
 

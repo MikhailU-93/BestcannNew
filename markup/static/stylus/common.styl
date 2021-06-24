@@ -15,6 +15,9 @@ html, body
   @media (max-width bTablet)
     font-size 15px
 
+  @media (max-width bSmallTablet)
+    font-size 14px
+
   & .swiper-pagination
     bottom 0
 
@@ -71,6 +74,20 @@ html, body
     width 100%
     height auto
 
+    @media (max-width bSmallTablet)
+      display none
+
+  & img
+    display none
+    width 100%
+    height 100%
+
+    object-fit cover
+    object-position center
+
+    @media (max-width bSmallTablet)
+      display block
+
 .forBack
   background-color main-color-2
 
@@ -98,6 +115,11 @@ html, body
     margin 0 0 70px
 
     font-size 35px
+
+  @media (max-width bSmallTablet)
+    margin 0 0 60px
+
+    font-size 30px
 
   &.-darkTheme
     color main-color-1
@@ -131,6 +153,9 @@ html, body
 
   @media (max-width bTablet)
     font-size 18px
+
+  @media (max-width bSmallTablet)
+    font-size 17px
 
   &.-darkTheme
     color main-color-1

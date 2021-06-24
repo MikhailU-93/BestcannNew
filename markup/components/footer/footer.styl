@@ -13,10 +13,21 @@
       max-width tabletWidth
       padding 15px 0
 
+    @media (max-width bSmallTablet)
+      max-width smallTabletWidth
+      flex-direction column
+
   &_notice
+    display block
+
     color rgba(255, 255, 255, .6)
 
+    @media (max-width bSmallTablet)
+      margin-bottom 10px
+
   &_dev
+    display block
+
     color rgba(255, 255, 255, .6)
 
   &_link

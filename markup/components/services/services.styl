@@ -14,11 +14,17 @@
     @media (max-width bTablet)
       max-width tabletWidth
 
+    @media (max-width bSmallTablet)
+      max-width smallTabletWidth
+
   &_title
     margin 0 0 50px
 
     @media (max-width bTablet)
       margin 0 0 30px
+
+    @media (max-width bSmallTablet)
+      margin 0 0 25px
 
   &_sliderWrap
     position relative
@@ -28,6 +34,9 @@
 
     @media (max-width bTablet)
       margin-bottom 40px
+
+    @media (max-width bSmallTablet)
+      margin-bottom 35px
 
   &_btn
     position absolute
@@ -64,6 +73,9 @@
     @media (max-width bTablet)
       padding 45px 0
       width calc(100% - 150px)
+
+    @media (max-width bSmallTablet)
+      width calc(100% - 80px)
 
   &_items
     display flex

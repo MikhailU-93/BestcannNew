@@ -4,12 +4,18 @@
   @media (max-width bTablet)
     padding 60px 0 40px
 
+  @media (max-width bSmallTablet)
+    padding 50px 0 40px
+
   &_wrap
     max-width ContentWidth
     margin 0 auto
 
     @media (max-width bTablet)
       max-width tabletWidth
+
+    @media (max-width bSmallTablet)
+      max-width smallTabletWidth
 
   &_subtitle
     display block
@@ -23,7 +29,10 @@
     @media (max-width bTablet)
       margin-bottom 20px
 
-     font-size 20px
+      font-size 20px
+
+    @media (max-width bSmallTablet)
+      font-size 18px
 
   &_notice
     display block
@@ -36,6 +45,11 @@
     @media (max-width bTablet)
       margin-bottom 40px
 
+    @media (max-width bSmallTablet)
+      margin-bottom 30px
+
+      font-size 15px
+
   &_main
     width 100%
     max-width 1000px
@@ -44,6 +58,10 @@
     align-items center
     justify-content space-between
 
+    @media (max-width bSmallTablet)
+      flex-direction column
+      margin-bottom 40px
+
   &_pic
     display block
     width 447px
@@ -51,6 +69,9 @@
 
     object-fit contain
     object-position center
+
+    @media (max-width bSmallTablet)
+      display none
 
   &_form
     display flex
@@ -67,6 +88,14 @@
 
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
 
+    @media (max-width bTablet)
+      box-shadow: 0 12px 24px rgba(0,0,0,0.25), 0 8px 8px rgba(0,0,0,0.22)
+
+    @media (max-width bSmallTablet)
+      max-width 350px
+
+      box-shadow: 0 10px 21px rgba(0,0,0,0.25), 0 7px 7px rgba(0,0,0,0.22)
+
 
   &_inputGroup
     width 100%
@@ -78,7 +107,7 @@
   &_label
     display flex
     margin-bottom 10px
-    padding-left 10px
+    padding-left 5px
 
     font-family Gilroy
     font-weight 600
@@ -86,11 +115,17 @@
     color main-color-2
     text-align center
 
+    @media (max-width bSmallTablet)
+      padding-left 3px
+
     & strong
       display block
       margin-right 5px
 
       color red
+
+      @media (max-width bSmallTablet)
+        margin-right 3px
 
   &_input
     display block
