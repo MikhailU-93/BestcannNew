@@ -12,15 +12,16 @@ let swiperServices = new Swiper('.services_slider', {
   },
   breakpoints: {
     // when window width is >= 640px
-    999: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
-      spaceBetween: 35,
-    },
     767: {
       slidesPerView: 2,
       slidesPerGroup: 2,
       spaceBetween: 35,
+    },
+    639: {
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      slidesPerGroup: 1,
+      spaceBetween: 25,
     }
   }
 });

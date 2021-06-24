@@ -20,6 +20,9 @@
     @media (max-width bSmallTablet)
       max-width smallTabletWidth
 
+    @media (max-width bPhone)
+      padding 0 15px
+
   &_titleGroup
     display flex
     align-items center
@@ -42,7 +45,7 @@
     text-align center
 
     @media (max-width bLaptop)
-      margin 0 0 20
+      margin 0 0 20px
 
       font-size 45px
 
@@ -51,6 +54,9 @@
 
     @media (max-width bSmallTablet)
       font-size 35px
+
+    @media (max-width bPhone)
+      font-size 30px
 
   &_subtitle
     margin-bottom 60px
@@ -66,10 +72,17 @@
       font-size 20px
 
     @media (max-width bTablet)
+      margin-bottom 40px
+
       font-size 18px
 
     @media (max-width bSmallTablet)
+      margin-bottom 35px
+
       font-size 17px
+
+    @media (max-width bPhone)
+      margin-bottom 30px
 
   &_link
     // transition .2s all

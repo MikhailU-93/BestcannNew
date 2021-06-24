@@ -1,6 +1,9 @@
 .footer
   background-color main-color-2
 
+  & .socialsLine_menuIcon
+    display none
+
   &_wrap
     max-width ContentWidth
     margin 0 auto
@@ -17,6 +20,9 @@
       max-width smallTabletWidth
       flex-direction column
 
+    @media (max-width bPhone)
+      padding 15px
+
   &_notice
     display block
 
@@ -25,10 +31,15 @@
     @media (max-width bSmallTablet)
       margin-bottom 10px
 
+      text-align center
+
   &_dev
     display block
 
     color rgba(255, 255, 255, .6)
+
+    @media (max-width bSmallTablet)
+      text-align center
 
   &_link
     margin-left 5px

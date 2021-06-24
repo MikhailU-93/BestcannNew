@@ -11,11 +11,11 @@ const swiperWhaUse = new Swiper('.whatUse_slider', {
     clickable: true,
   },
   breakpoints: {
-    // when window width is >= 640px
+    // when window width is >= 999px
     999: {
       spaceBetween: 55,
     },
-    767: {
+    639: {
       slidesPerView: 2,
       slidesPerGroup: 2,
       spaceBetween: 50,

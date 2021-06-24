@@ -23,6 +23,9 @@
     background-size 600px 450px
     background-position 0 100px
 
+  @media (max-width bPhone)
+    padding 40px 0 25px
+
   &_wrap
     max-width ContentWidth
     margin 0 auto
@@ -33,6 +36,9 @@
 
     @media (max-width bSmallTablet)
       max-width smallTabletWidth
+
+    @media (max-width bPhone)
+      padding 0 15px
 
   &_main
     display flex
@@ -52,6 +58,7 @@
 
   &_infoGroup
     max-width 600px
+    width 100%
     display flex
     flex-direction column
     align-items flex-end
@@ -69,6 +76,8 @@
     text-align right
 
     @media (max-width bTablet)
+      margin-bottom 40px
+
       font-size 18px
       line-height 24px
 
@@ -77,7 +86,11 @@
       font-size 17px
       line-height 22px
 
+    @media (max-width bPhone)
+      margin-bottom 30px
 
+      font-size 16px
+      
     & p
       &:first-child
         margin-top 0
@@ -95,3 +108,8 @@
       width 162px
       height 365px
       margin-bottom 30px
+
+    @media (max-width bPhone)
+      width 146px
+      height 330px
+      margin-bottom 20px

@@ -14,6 +14,9 @@
   @media (max-width bSmallTablet)
     padding 50px 0 30px
 
+  @media (max-width bPhone)
+    padding 40px 0 25px
+
   &_wrap
     max-width ContentWidth
     margin 0 auto
@@ -24,11 +27,17 @@
     @media (max-width bSmallTablet)
       max-width smallTabletWidth
 
+    @media (max-width bPhone)
+      padding 0 15px
+
   &_title
     margin 0 0 50px
 
     @media (max-width bTablet)
       margin 0 0 40px
+
+    @media (max-width bPhone)
+      margin 0 0 25px
 
   &_sliderWrap
     position relative
@@ -54,6 +63,10 @@
       width 35px
       height 25px
 
+    @media (max-width bPhone)
+      width 30px
+      height 20px
+
     &:hover
       fill hover-color
 
@@ -71,6 +84,10 @@
 
     @media (max-width bTablet)
       width calc(100% - 80px)
+
+    @media (max-width bPhone)
+      width calc(100% - 65px)
+      padding 45px 25px
 
   &_items
     display flex
@@ -109,6 +126,9 @@
     @media (max-width bTablet)
       height 220px
 
+    @media (max-width bPhone)
+      height 200px
+
   &_infoGroup
     display flex
     flex-direction column
@@ -118,12 +138,18 @@
     padding 15px
     border-top 1px solid main-color-2
 
+    @media (max-width bPhone)
+      padding 12px
+
   &_name
     position relative
 
     margin 0 0 30px
 
     color main-color-2
+
+    @media (max-width bPhone)
+      margin 0 0 20px
 
     &::before
       content ''

@@ -7,6 +7,9 @@
   @media (max-width bSmallTablet)
     padding 50px 0
 
+  @media (max-width bPhone)
+    padding 40px 0
+
   &_wrap
     max-width ContentWidth
     margin 0 auto
@@ -17,6 +20,9 @@
     @media (max-width bSmallTablet)
       max-width smallTabletWidth
 
+    @media (max-width bPhone)
+      padding 0 15px
+
   &_title
     margin 0 0 50px
 
@@ -25,6 +31,9 @@
 
     @media (max-width bSmallTablet)
       margin 0 0 30px
+
+    @media (max-width bPhone)
+      margin 0 0 20px
 
   &_sliderWrap
     position relative
@@ -54,6 +63,10 @@
       width 35px
       height 25px
 
+    @media (max-width bPhone)
+      width 30px
+      height 25px
+
     &:hover
       fill hover-color
 
@@ -76,6 +89,9 @@
       padding 30px 20px 40px
       width calc(100% - 50px)
 
+    @media (max-width bPhone)
+      width calc(100% - 100px)
+
   &_item
     display flex
     margin 0 auto
@@ -97,6 +113,10 @@
 
       box-shadow: 0 10px 21px rgba(0,0,0,0.25), 0 7px 7px rgba(0,0,0,0.22)      
 
+    @media (max-width bPhone)
+      padding 0
+      flex-direction column
+
   &_photosWrap
     flex-shrink 0
     max-width 450px
@@ -112,6 +132,9 @@
       max-width 300px
       height 230px
 
+    @media (max-width bPhone)
+      max-width none
+
   &_mainPhoto
     flex-shrink 0
     width 100%
@@ -119,6 +142,9 @@
     border-radius 15px
     overflow hidden
     margin-bottom 10px
+
+    @media (max-width bPhone)
+      border-radius 15px 15px 0 0
 
   &_photo
     display block
@@ -159,6 +185,7 @@
 
   &_info
     width 100%
+    box-sizing border-box
     height 350px
     display flex
     flex-direction column
@@ -170,6 +197,9 @@
 
     @media (max-width bSmallTablet)
       height 230px
+
+    @media (max-width bPhone)
+      padding 13px
 
   &_desc
     display block

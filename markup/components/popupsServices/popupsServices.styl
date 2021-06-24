@@ -31,6 +31,8 @@
 
     width 100%
     height 100%
+    box-sizing border-box
+    padding 15px
 
   &_content
     position relative
@@ -43,6 +45,9 @@
 
     background-color main-color-1
 
+    @media (max-width bPhone)
+      max-width 450px
+
   &_photo
     display block
     width 100%
@@ -51,6 +56,9 @@
 
     object-fit cover
     object-position center
+
+    @media (max-width bPhone)
+      height 200px
 
   &_close
     position absolute
@@ -64,6 +72,12 @@
   &_infoGroup
     display block
     padding 20px
+
+    @media (max-width bTablet)
+      padding 15px
+
+    @media (max-width bPhone)
+      padding 13px
 
   &_title
     position relative
@@ -86,8 +100,20 @@
 
       background-color hover-color
 
+      @media (max-width bTablet)
+        bottom -7px
+
+        width 60px
+        height 3px
+
   &_text
     display block
     
     color main-color-2
     font-size 18px
+
+    @media (max-width bTablet)
+      font-size 16px
+
+    @media (max-width bPhone)
+      font-size 14px
