@@ -10,6 +10,12 @@ const swiperWhaUse = new Swiper('.whatUse_slider', {
     el: '.swiper-pagination',
     clickable: true,
   },
+  breakpoints: {
+    // when window width is >= 640px
+    980: {
+      spaceBetween: 55,
+    }
+  }
 });
 
 $('.whatUse_btn.-next').on('click', function() {

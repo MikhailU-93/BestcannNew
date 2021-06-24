@@ -1,9 +1,15 @@
 .checkAuto
   padding 80px 0 50px
 
+  @media (max-width bTablet)
+    padding 60px 0 40px
+
   &_wrap
     max-width ContentWidth
     margin 0 auto
+
+    @media (max-width bTablet)
+      max-width tabletWidth
 
   &_subtitle
     display block
@@ -14,6 +20,11 @@
     font-weight 700
     text-align center
 
+    @media (max-width bTablet)
+      margin-bottom 20px
+
+     font-size 20px
+
   &_notice
     display block
     margin-bottom 50px
@@ -21,6 +32,9 @@
     color rgba(0, 0, 0, .3)
     font-size 16px
     text-align center
+
+    @media (max-width bTablet)
+      margin-bottom 40px
 
   &_main
     width 100%

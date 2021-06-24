@@ -7,9 +7,16 @@
   background-size contain
   background-position 110% 120%
 
+  @media (max-width bTablet)
+    background-size 70%
+    padding 60px 0 40px
+
   &_wrap
     max-width ContentWidth
     margin 0 auto
+
+    @media (max-width bTablet)
+      max-width tabletWidth
 
   &_items
     width 100%
@@ -23,6 +30,9 @@
     flex-direction column
     margin-bottom 40px
 
+    @media (max-width bTablet)
+      width 240px
+
   &_icon
     width 140px
     height 140px
@@ -31,8 +41,16 @@
     object-position center
     object-fit contain
 
+    @media (max-width bTablet)
+      width 120px
+      height 120px
+      margin-bottom 25px
+
   &_info
     display block
 
     font-size 18px
     text-align center
+
+    @media (max-width bTablet)
+      font-size 16px

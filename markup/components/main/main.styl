@@ -10,11 +10,17 @@
     align-items center
     justify-content center
 
+    @media (max-width bTablet)
+      max-width tabletWidth
+
   &_titleGroup
     display flex
     align-items center
     flex-direction column
     max-width 900px
+
+    @media (max-width bTablet)
+      max-width 800px
 
   &_title
     margin 0 0 30px
@@ -25,6 +31,14 @@
 
     text-align center
 
+    @media (max-width bLaptop)
+      margin 0 0 20
+
+      font-size 45px
+
+    @media (max-width bTablet)
+      font-size 40px
+
   &_subtitle
     margin-bottom 60px
     display block
@@ -32,6 +46,14 @@
     font-weight 600
 
     text-align center
+
+    @media (max-width bLaptop)
+      margin-bottom 45px
+
+      font-size 20px
+
+    @media (max-width bTablet)
+      font-size 18px
 
   &_link
     // transition .2s all

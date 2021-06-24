@@ -6,16 +6,36 @@
   background-size 925px 680px
   background-position -10% 50%
 
+  @media (max-width bDesktop)
+    background-position -40% 50%
+
+  @media (max-width bLaptop)
+    background-position -100% 50%
+
+  @media (max-width bTablet)
+    padding 60px 0 40px
+
+    background-position -400px 100%
+
   &_wrap
     max-width ContentWidth
     margin 0 auto
     box-sizing border-box
-    padding 0 0 0 100px
+
+    @media (max-width bTablet)
+      max-width tabletWidth
 
   &_main
     display flex
     align-items center
     justify-content space-between
+    width 100%
+    padding-left 100px
+    box-sizing border-box
+
+    @media (max-width bTablet)
+      padding-left 50px
+      
 
   &_infoGroup
     max-width 600px
@@ -31,6 +51,9 @@
     font-size 20px
     line-height 28px
     text-align right
+
+    @media (max-width bTablet)
+      font-size 18px
 
     & p
       &:first-child

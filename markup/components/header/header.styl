@@ -31,6 +31,10 @@
     margin 0 auto
     padding 20px 0
 
+    @media (max-width bTablet)
+      padding 15px 0
+      max-width tabletWidth
+
   &_links
     display flex
     align-items center
@@ -50,6 +54,11 @@
     text-transform uppercase
 
     transition .2s all
+
+    @media (max-width bTablet)
+      margin-right 20px
+
+      font-size 13px
 
     &.-active,
     &:hover
@@ -75,6 +84,9 @@
       transition .2s all
 
       background-color hover-color
+
+      @media (max-width bTablet)
+        bottom -7px
 
     &:last-child
       margin-right 0

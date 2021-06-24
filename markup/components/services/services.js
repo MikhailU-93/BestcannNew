@@ -10,6 +10,14 @@ let swiperServices = new Swiper('.services_slider', {
     el: '.swiper-pagination',
     clickable: true,
   },
+  breakpoints: {
+    // when window width is >= 640px
+    980: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 35,
+    }
+  }
 });
 
 $('.services_btn.-next').on('click', function() {

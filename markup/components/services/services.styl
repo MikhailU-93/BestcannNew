@@ -1,6 +1,9 @@
 .services
   padding 80px 0 50px
 
+  @media (max-width bTablet)
+    padding 60px 0 40px
+
   &_wrap
     max-width ContentWidth
     margin 0 auto
@@ -8,14 +11,23 @@
     flex-direction column
     align-items center
 
+    @media (max-width bTablet)
+      max-width tabletWidth
+
   &_title
     margin 0 0 50px
+
+    @media (max-width bTablet)
+      margin 0 0 30px
 
   &_sliderWrap
     position relative
     margin-bottom 50px
 
     width 100%
+
+    @media (max-width bTablet)
+      margin-bottom 40px
 
   &_btn
     position absolute
@@ -32,6 +44,10 @@
     fill main-color-1
     transition .2s all
 
+    @media (max-width bTablet)
+      width 35px
+      height 25px
+
     &:hover
       fill hover-color
 
@@ -44,6 +60,10 @@
   &_slider
     width calc(100% - 100px)
     padding 50px 0
+
+    @media (max-width bTablet)
+      padding 45px 0
+      width calc(100% - 150px)
 
   &_items
     display flex
@@ -58,6 +78,9 @@
 
     background-color rgba(55, 211, 211, .6)
 
+    @media (max-width bTablet)
+      width 300px
+
     &:nth-child(2)
       background-color rgba(248, 220, 30, .8)
 
@@ -70,6 +93,9 @@
     display block
     width 100%
     height 250px
+
+    @media (max-width bTablet)
+      height 220px
 
     &::before
       content ''
@@ -96,6 +122,9 @@
     box-sizing border-box
     padding 15px
 
+    @media (max-width bTablet)
+      padding 13px
+
     //background-color rgba(55, 211, 211, .6)
 
   &_item:nth-child(2) &_photoWrap::before
@@ -109,6 +138,9 @@
 
     margin 0 0 30px
 
+    @media (max-width bTablet)
+      margin 0 0 25px
+
     &::before
       content ''
       position absolute
@@ -120,6 +152,9 @@
       height 5px
 
       background-color hover-color
+
+      @media (max-width bTablet)
+        bottom -7px
 
   &_info
     display block
@@ -137,6 +172,14 @@
     align-items center
     justify-content space-between
 
+    @media (max-width bTablet)
+      padding 13px
+      justify-content center
+
+  &_more
+    @media (max-width bTablet)
+      margin-right 20px
+
   &_more,
   &_formLink
     display block
@@ -146,6 +189,9 @@
 
     text-decoration none
     color main-color-1
+
+    @media (max-width bTablet)
+      padding 13px 18px
 
   &_notice
     display block

@@ -6,12 +6,23 @@
   background-position 0 100%
   background-size contain
 
+  @media (max-width bTablet)
+    padding 60px 0 40px
+
+    background-size 50%
+
   &_wrap
     max-width ContentWidth
-    margin 0  auto
+    margin 0 auto
+
+    @media (max-width bTablet)
+      max-width tabletWidth
 
   &_title
     margin 0 0 50px
+
+    @media (max-width bTablet)
+      margin 0 0 40px
 
   &_sliderWrap
     position relative
@@ -33,6 +44,10 @@
     fill main-color-2
     transition .2s all
 
+    @media (max-width bTablet)
+      width 35px
+      height 25px
+
     &:hover
       fill hover-color
 
@@ -47,6 +62,9 @@
     width calc(100% - 100px)
     box-sizing border-box
     padding 50px 30px
+
+    @media (max-width bTablet)
+      width calc(100% - 80px)
 
   &_items
     display flex
@@ -66,6 +84,11 @@
 
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
 
+    @media (max-width bTablet)
+      width 250px
+
+      box-shadow: 0 12px 24px rgba(0,0,0,0.25), 0 8px 8px rgba(0,0,0,0.22)
+
   &_photo
     display block
     width 100%
@@ -73,6 +96,9 @@
 
     object-fit contain
     object-position center
+
+    @media (max-width bTablet)
+      height 220px
 
   &_infoGroup
     display flex
