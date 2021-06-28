@@ -31,11 +31,11 @@ const swiperComments = new Swiper('.comments_slider', {
 });
 
 $('.comments_btn.-next').on('click', function() {
-  swiperServices.slideNext();
+  swiperComments.slideNext();
 });
 
 $('.comments_btn.-prev').on('click', function() {
-  swiperServices.slidePrev();
+  swiperComments.slidePrev();
 });
 
 
