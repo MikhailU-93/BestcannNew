@@ -1,9 +1,6 @@
 import $ from 'jquery';
 
 const swiperWhaUse = new Swiper('.whatUse_slider', {
-  slidesPerView: 3,
-  slidesPerGroup: 3,
-  spaceBetween: 80,
   loop: true,
   speed: 500,
   pagination: {
@@ -13,6 +10,8 @@ const swiperWhaUse = new Swiper('.whatUse_slider', {
   breakpoints: {
     // when window width is >= 999px
     999: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
       spaceBetween: 55,
     },
     639: {

@@ -1,9 +1,6 @@
 import $ from 'jquery';
 
 let swiperServices = new Swiper('.services_slider', {
-  slidesPerView: 3,
-  slidesPerGroup: 3,
-  spaceBetween: 20,
   loop: true,
   speed: 500,
   pagination: {
@@ -12,15 +9,17 @@ let swiperServices = new Swiper('.services_slider', {
   },
   breakpoints: {
     // when window width is >= 640px
-    // 999: {
-    //   spaceBetween: 20,
-    // },
-    767: {
+    1000: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween: 20,
+    },
+    768: {
       slidesPerView: 2,
       slidesPerGroup: 2,
       spaceBetween: 35,
     },
-    479: {
+    480: {
       slidesPerView: 'auto',
       centeredSlides: true,
       slidesPerGroup: 1,
