@@ -26,6 +26,12 @@
   @media (max-width bPhone)
     padding 40px 0 25px
 
+  @media (max-width bSmallPhone)
+    padding 35px 0 20px
+
+    background-size 490px 360px
+    background-position -50px 50px
+
   &_wrap
     max-width ContentWidth
     margin 0 auto
@@ -39,6 +45,9 @@
 
     @media (max-width bPhone)
       padding 0 15px
+
+    @media (max-width bSmallPhone)
+      padding 0 10px
 
   &_main
     display flex
@@ -90,11 +99,18 @@
       margin-bottom 30px
 
       font-size 16px
+
+    @media (max-width bSmallPhone)
+      margin-bottom 25px
+
+      font-size 14px
       
     & p
-      &:first-child
-        margin-top 0
+      margin-top 0
 
+      @media (max-width bSmallPhone)
+        margin-bottom 10px
+        
       &:last-child
         margin-bottom 0
 
@@ -113,3 +129,7 @@
       width 146px
       height 330px
       margin-bottom 20px
+
+    @media (max-width bSmallPhone)
+      width 122px
+      height 270px

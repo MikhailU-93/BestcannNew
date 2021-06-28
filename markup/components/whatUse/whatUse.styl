@@ -17,6 +17,9 @@
   @media (max-width bPhone)
     padding 40px 0 25px
 
+  @media (max-width bSmallPhone)
+    padding 35px 0 20px
+
   &_wrap
     max-width ContentWidth
     margin 0 auto
@@ -30,6 +33,9 @@
     @media (max-width bPhone)
       padding 0 15px
 
+    @media (max-width bSmallPhone)
+      padding 0 10px
+
   &_title
     margin 0 0 50px
 
@@ -38,6 +44,9 @@
 
     @media (max-width bPhone)
       margin 0 0 25px
+
+    @media (max-width bSmallPhone)
+      margin 0 0 20px
 
   &_sliderWrap
     position relative
@@ -89,6 +98,10 @@
       width calc(100% - 65px)
       padding 45px 25px
 
+    @media (max-width bSmallPhone)
+      width calc(100% - 75px)
+      padding 35px 0
+
   &_items
     display flex
     width 100%
@@ -129,6 +142,9 @@
     @media (max-width bPhone)
       height 200px
 
+    @media (max-width bSmallPhone)
+      height 180px
+
   &_infoGroup
     display flex
     flex-direction column
@@ -162,6 +178,12 @@
       height 5px
 
       background-color hover-color
+
+      @media (max-width bTablet)
+        bottom -7px
+
+        width 60px
+        height 3px
 
   &_info
     display block

@@ -19,6 +19,12 @@ const swiperWhaUse = new Swiper('.whatUse_slider', {
       slidesPerView: 2,
       slidesPerGroup: 2,
       spaceBetween: 50,
+    },
+    479: {
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      slidesPerGroup: 1,
+      spaceBetween: 25,
     }
   }
 });

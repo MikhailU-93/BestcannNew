@@ -2,8 +2,8 @@
 
 html, body
   height 100%
-
-
+  min-width 320px
+  
 .page
   overflow-x hidden
 
@@ -20,6 +20,9 @@ html, body
 
   @media (max-width bPhone)
     font-size 13px
+
+  @media (max-width bSmallPhone)
+    font-size 12px
 
   & .swiper-pagination
     bottom 0
@@ -58,6 +61,9 @@ html, body
 
   @media (max-width bPhone)
     min-height 450px
+
+  @media (max-width bSmallPhone)
+    min-height 400px
 
 .video_wrap
   position absolute
@@ -138,9 +144,14 @@ html, body
     font-size 30px
 
   @media (max-width bPhone)
-    margin 0 0 50px
+    margin 0 0 40px
     
     font-size 25px
+
+  @media (max-width bSmallPhone)
+    margin 0 0 30px
+
+    font-size 22px
 
   &.-darkTheme
     color main-color-1
@@ -170,6 +181,9 @@ html, body
       width 160px
       height 6px
 
+    @media (max-width bSmallPhone)
+      bottom -9px
+
 .subtitle
   margin 0
 
@@ -186,6 +200,9 @@ html, body
 
   @media (max-width bPhone)
     font-size 16px
+
+  @media (max-width bSmallPhone)
+    font-size 15px
 
   &.-darkTheme
     color main-color-1
