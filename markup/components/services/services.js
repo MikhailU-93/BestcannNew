@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-let swiperServices = new Swiper('.services_slider', {
+const swiperServices = new Swiper('.services_slider', {
   loop: true,
   speed: 500,
   pagination: {
@@ -20,6 +20,12 @@ let swiperServices = new Swiper('.services_slider', {
       spaceBetween: 35,
     },
     480: {
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      slidesPerGroup: 1,
+      spaceBetween: 25,
+    },
+    320: {
       slidesPerView: 'auto',
       centeredSlides: true,
       slidesPerGroup: 1,

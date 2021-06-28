@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-let swiperComments = new Swiper('.comments_slider', {
+const swiperComments = new Swiper('.comments_slider', {
   loop: true,
   speed: 500,
   pagination: {
@@ -22,6 +22,10 @@ let swiperComments = new Swiper('.comments_slider', {
     480: {
       centeredSlides: true,
       spaceBetween: 45,
+    },
+    320: {
+      centeredSlides: true,
+      spaceBetween: 25,
     }
   }
 });

@@ -13,6 +13,10 @@
   @media (max-width bPhone)
     padding 15px
 
+  @media (max-width bSmallestPhone)
+    max-width 270px
+    padding 13px
+
   &_logo
     display block
     width 80px
@@ -21,6 +25,10 @@
 
     object-fit contain
     object-position center
+
+    @media (max-width bSmallestPhone)
+      width 60px
+      margin-bottom 20px
 
   &_title
     margin-bottom 40px
@@ -84,6 +92,9 @@
     outline 0
 
     transition all .2s
+
+    @media (max-width bSmallTablet)
+      padding 8px
 
     &:hover,
     &:focus

@@ -13,6 +13,9 @@
   @media (max-width bSmallPhone)
     padding 35px 0 20px
 
+  @media (max-width bSmallestPhone)
+    padding 30px 0 20px
+
   &_wrap
     max-width ContentWidth
     margin 0 auto
@@ -82,6 +85,10 @@
       width 30px
       height 20px
 
+    @media (max-width bSmallestPhone)
+      width 27px
+      height 18px
+
     &:hover
       fill hover-color
 
@@ -106,6 +113,9 @@
     @media (max-width bSmallPhone)
       padding 35px 0
 
+    @media (max-width bSmallestPhone)
+      width calc(100% - 60px)
+
   &_items
     display flex
 
@@ -124,6 +134,10 @@
 
     @media (max-width bSmallPhone)
       width 280px
+
+    @media (max-width bSmallestPhone)
+      max-width 280px
+      width 100%
 
     &:nth-child(2)
       background-color rgba(248, 220, 30, .8)
@@ -146,6 +160,9 @@
 
     @media (max-width bSmallPhone)
       height 180px
+
+    @media (max-width bSmallestPhone)
+      height 130px
 
     &::before
       content ''
@@ -232,9 +249,15 @@
     @media (max-width bPhone)
       justify-content space-between
 
+    @media (max-width bSmallestPhone)
+      flex-direction column
+
   &_more
     @media (max-width bTablet)
       margin-right 20px
+
+    @media (max-width bSmallestPhone)
+      margin 0 0 10px 0
 
   &_more,
   &_formLink

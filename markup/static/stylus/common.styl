@@ -32,6 +32,11 @@ html, body
       height 12px
       margin 0 6px
 
+      @media (max-width bSmallestPhone)
+        width 9px
+        height 9px
+        margin 0 5px
+
     & .swiper-pagination-bullet-active
       background-color hover-color
 
@@ -64,7 +69,7 @@ html, body
 
   @media (max-width bSmallPhone)
     min-height 400px
-
+    
 .video_wrap
   position absolute
   top 0
@@ -119,7 +124,12 @@ html, body
     background-position 100% -100px
 
   @media (max-width bPhone)
+    background-position 150% -100px
     background-size 470px 790px
+
+  @media (max-width bSmallestPhone)
+    background-position 150% 0
+    background-size 235px 380px
 
 .title
   position relative
@@ -153,6 +163,9 @@ html, body
 
     font-size 22px
 
+  @media (max-width bSmallestPhone)
+    font-size 20px
+
   &.-darkTheme
     color main-color-1
 
@@ -184,6 +197,10 @@ html, body
     @media (max-width bSmallPhone)
       bottom -9px
 
+    @media (max-width bSmallestPhone)
+      width 100px
+      height 4px
+
 .subtitle
   margin 0
 
@@ -203,6 +220,9 @@ html, body
 
   @media (max-width bSmallPhone)
     font-size 15px
+
+  @media (max-width bSmallestPhone)
+    font-size 14px
 
   &.-darkTheme
     color main-color-1
@@ -225,6 +245,9 @@ html, body
 
   @media (max-width bPhone)
     padding 11px 16px
+
+  @media (max-width bSmallestPhone)
+    padding 10px 14px
 
   &:hover
     transform scale(1.1, 1.1)

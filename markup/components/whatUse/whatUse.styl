@@ -20,6 +20,9 @@
   @media (max-width bSmallPhone)
     padding 35px 0 20px
 
+  @media (max-width bSmallestPhone)
+    padding 30px 0 20px
+
   &_wrap
     max-width ContentWidth
     margin 0 auto
@@ -76,6 +79,10 @@
       width 30px
       height 20px
 
+    @media (max-width bSmallestPhone)
+      width 27px
+      height 18px
+
     &:hover
       fill hover-color
 
@@ -102,6 +109,10 @@
       width calc(100% - 75px)
       padding 35px 0
 
+    @media (max-width bSmallestPhone)
+      max-width 235px
+      padding 35px 10px
+
   &_items
     display flex
     width 100%
@@ -122,6 +133,9 @@
 
     @media (max-width bTablet)
       width 250px
+
+    @media (max-width bSmallestPhone)
+      box-shadow: 0 5px 10px rgba(0,0,0,0.25), 0 3px 3px rgba(0,0,0,0.22)
 
   &_photo
     display block

@@ -36,8 +36,46 @@
     @media (max-width bSmallPhone)
       padding 0 10px
 
+  &_sliderWrap
+    position relative
+
+    width 100%
+
+  &_btn
+    position absolute
+    top 50%
+    transform translateY(-50%)
+
+    display none
+
+    cursor: pointer
+
+    fill main-color-2
+    transition .2s all
+
+    @media (max-width bSmallestPhone)
+      display block
+      width 27px
+      height 18px
+
+    &:hover
+      fill hover-color
+
+    &.-prev
+      left 0
+    
+    &.-next
+      right 0
+
+  &_slider
+    display block
+    box-sizing border-box
+
+    @media (max-width bSmallestPhone)
+      max-width 235px
+      padding 35px 10px
+
   &_items
-    margin-top 30px
     display grid
     grid-template-columns repeat(4, auto)
 
@@ -48,6 +86,10 @@
       display flex
       flex-wrap wrap
       justify-content space-evenly
+
+    @media (max-width bSmallestPhone)
+      flex-wrap nowrap
+      justify-content flex-start
 
   &_item
     position: relative
@@ -73,6 +115,9 @@
 
     @media (max-width bSmallPhone)
       width 200px
+
+    @media (max-width bSmallestPhone)
+      box-shadow: 0 5px 10px rgba(0,0,0,0.25), 0 3px 3px rgba(0,0,0,0.22)
 
   &_cloud
     position absolute

@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-const swiperWhaUse = new Swiper('.whatUse_slider', {
+const swiperWhatUse = new Swiper('.whatUse_slider', {
   loop: true,
   speed: 500,
   pagination: {
@@ -9,19 +9,23 @@ const swiperWhaUse = new Swiper('.whatUse_slider', {
   },
   breakpoints: {
     // when window width is >= 999px
-    999: {
+    1000: {
       slidesPerView: 3,
       slidesPerGroup: 3,
       spaceBetween: 55,
     },
-    639: {
+    640: {
       slidesPerView: 2,
       slidesPerGroup: 2,
       spaceBetween: 50,
     },
-    479: {
+    480: {
       slidesPerView: 'auto',
       centeredSlides: true,
+      slidesPerGroup: 1,
+      spaceBetween: 25,
+    },
+    320: {
       slidesPerGroup: 1,
       spaceBetween: 25,
     }
@@ -29,9 +33,9 @@ const swiperWhaUse = new Swiper('.whatUse_slider', {
 });
 
 $('.whatUse_btn.-next').on('click', function() {
-  swiperWhaUse.slideNext();
+  swiperWhatUse.slideNext();
 });
 
 $('.whatUse_btn.-prev').on('click', function() {
-  swiperWhaUse.slidePrev();
+  swiperWhatUse.slidePrev();
 });

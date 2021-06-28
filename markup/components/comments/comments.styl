@@ -13,6 +13,9 @@
   @media (max-width bSmallPhone)
     padding 35px 0
 
+  @media (max-width bSmallestPhone)
+    padding 30px 0
+
   &_wrap
     max-width ContentWidth
     margin 0 auto
@@ -29,6 +32,9 @@
     @media (max-width bSmallPhone)
       padding 0 15px
 
+    @media (max-width bSmallestPhone)
+      padding 0 10px
+
   &_title
     margin 0 0 50px
 
@@ -43,6 +49,7 @@
 
     @media (max-width bSmallPhone)
       margin 0 0 15px
+      
 
   &_sliderWrap
     position relative
@@ -74,7 +81,11 @@
 
     @media (max-width bPhone)
       width 30px
-      height 25px
+      height 20px
+
+    @media (max-width bSmallestPhone)
+      width 27px
+      height 18px
 
     &:hover
       fill hover-color
@@ -104,6 +115,11 @@
       width calc(100% - 40px)
       padding 35px 20px
 
+    @media (max-width bSmallestPhone)
+      max-width 235px
+      width 100%
+      padding 35px 10px
+
   &_item
     display flex
     flex-direction column
@@ -125,6 +141,9 @@
       padding 0
       flex-direction column
 
+    @media (max-width bSmallestPhone)
+      box-shadow: 0 5px 10px rgba(0,0,0,0.25), 0 3px 3px rgba(0,0,0,0.22)
+
   &_photosWrap
     flex-shrink 0
     width 100%
@@ -139,6 +158,9 @@
 
     @media (max-width bSmallPhone)
       height 180px
+    
+    @media (max-width bSmallestPhone)
+      height 140px
 
   &_mainPhoto
     flex-shrink 0

@@ -78,6 +78,9 @@ hoverSocials = {
     @media (max-width bSmallPhone)
       width 63px
 
+    @media (max-width bSmallestPhone)
+      width 55px
+
   &_linkGroup
     display flex
     align-items center
@@ -112,6 +115,12 @@ hoverSocials = {
     @media (max-width bSmallTablet)
       margin-right 0
 
+    @media (max-width bSmallestPhone)
+      width 25px
+      height 25px
+
+      background-size 12px auto
+
     &::before
       content ''
       position absolute
@@ -133,6 +142,9 @@ hoverSocials = {
       background-size 15px auto
       background-position center
       background-repeat no-repeat
+
+      @media (max-width bSmallestPhone)
+        background-size 12px auto
 
   &_linkGroup:last-child &_linkIcon
     background-image url(__static__assets/socialsLine/icon-2.png)
@@ -192,6 +204,12 @@ hoverSocials = {
     background-position center
     background-repeat no-repeat
 
+    @media (max-width bSmallestPhone)
+      width 25px
+      height 25px
+
+      background-size 12px auto
+
     &:hover
       border 1px solid hover-color
 
@@ -220,6 +238,9 @@ hoverSocials = {
       background-position center
       background-repeat no-repeat
 
+      @media (max-width bSmallestPhone)
+        background-size 12px auto
+
     &:last-child
       margin-right 0
 
@@ -243,6 +264,10 @@ hoverSocials = {
     @media (max-width bSmallTablet)
       display flex
 
+    @media (max-width bSmallestPhone)
+      width 25px
+      height 25px
+
     &:hover,
     &.-active
       border 1px solid hover-color
@@ -257,6 +282,9 @@ hoverSocials = {
 
     background-color main-color-1
     transition .2s all
+
+    @media (max-width bSmallestPhone)
+      width 14px
 
     &:last-child
       margin-bottom 0

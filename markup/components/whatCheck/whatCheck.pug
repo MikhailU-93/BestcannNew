@@ -2,10 +2,17 @@ mixin whatCheck(data)
   section.whatCheck.section(id='whatCheck')
     .whatCheck_wrap
       h2.whatCheck_title.title Что мы проверяем?
-      .whatCheck_items
-        each item in data.items
-          .whatCheck_item
-            span.whatCheck_cloud= item.info
-            img.whatCheck_photo(src= item.photo, alt="")
-            span.whatCheck_nameWrap
-              h3.whatCheck_name.subtitle= item.name
+      .whatCheck_sliderWrap
+        != pugHelpers.Icon.call(locals, {iconName: 'arrow-left', className: 'whatCheck_btn -prev', iconWidth: '35', iconHeight: '75'})
+        
+        != pugHelpers.Icon.call(locals, {iconName: 'arrow-right', className: 'whatCheck_btn -next', iconWidth: '30', iconHeight: '20'})
+        .whatCheck_slider
+          .whatCheck_items
+            each item in data.items
+              .whatCheck_item
+                span.whatCheck_cloud= item.info
+                img.whatCheck_photo(src= item.photo, alt="")
+                span.whatCheck_nameWrap
+                  h3.whatCheck_name.subtitle= item.name
+
+          .swiper-pagination
