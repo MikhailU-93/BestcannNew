@@ -1,5 +1,5 @@
 .mainForm
-  display flex
+  display none
   align-items center
   flex-direction column
   max-width 450px
@@ -13,6 +13,9 @@
   @media (max-width bSmallestPhone)
     padding 13px
     max-width 270px
+
+  &.-show
+    display flex
 
   &_logo
     display block

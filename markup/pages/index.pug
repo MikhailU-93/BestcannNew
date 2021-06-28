@@ -18,6 +18,7 @@ html(class="no-js", lang="ru")
   include ../components/footer/footer.pug
 
   include ../components/popupsServices/popupsServices.pug
+  include ../components/popup/popup.pug
 
   head
     +head(head.defaults)
@@ -40,8 +41,8 @@ html(class="no-js", lang="ru")
     +checkAuto()
     +comments(comments.main)
     +footer()
-
-    +popupsServices(services.main)
+    
+    +popup()
 
     script(src='%=static=%js/separate-js/svg4everybody.min.js')
     script svg4everybody();

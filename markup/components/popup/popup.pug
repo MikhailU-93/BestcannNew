@@ -1,0 +1,11 @@
+mixin popup(data)
+  section.popup
+    .popup_area.popup-close
+
+    .popup_contentWrap
+      a.popup_close.popup-close(href="#") X
+
+      .popup_content
+        +form()
+        +mainForm()
+        +popupsServices(services.main)

@@ -9,4 +9,4 @@ import 'components/services/services.js';
 import 'components/header/header.js';
 import 'components/comments/comments.js';
 
-import 'components/popupsServices/popupsServices.js';
+import 'components/popup/popup.js';
