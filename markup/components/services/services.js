@@ -9,9 +9,14 @@ const swiperServices = new Swiper('.services_slider', {
   },
   breakpoints: {
     // when window width is >= 640px
-    1000: {
+    1200: {
       slidesPerView: 3,
       slidesPerGroup: 3,
+      spaceBetween: 20,
+    },
+    1000: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
       spaceBetween: 20,
     },
     768: {

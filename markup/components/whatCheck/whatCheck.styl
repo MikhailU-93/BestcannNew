@@ -31,6 +31,7 @@
       max-width smallTabletWidth
 
     @media (max-width bPhone)
+      max-width 480px
       padding 0 15px
 
     @media (max-width bSmallPhone)
@@ -83,11 +84,10 @@
       grid-template-columns repeat(3, auto)
 
     @media (max-width bPhone)
-      display flex
-      flex-wrap wrap
-      justify-content space-evenly
+      grid-template-columns repeat(2, auto)
 
     @media (max-width bSmallestPhone)
+      display flex
       flex-wrap nowrap
       justify-content flex-start
 
@@ -95,7 +95,7 @@
     position: relative
   
     width 220px
-    margin-bottom 40px
+    margin 0 auto 40px
     display flex
     align-items center
     flex-direction column
@@ -117,6 +117,8 @@
       width 200px
 
     @media (max-width bSmallestPhone)
+      margin-bottom 0
+
       box-shadow: 0 5px 10px rgba(0,0,0,0.25), 0 3px 3px rgba(0,0,0,0.22)
 
   &_cloud

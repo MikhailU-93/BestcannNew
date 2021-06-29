@@ -39,7 +39,7 @@
       padding 0 15px
 
     @media (max-width bSmallPhone)
-     padding 0 10px
+      padding 0 10px
 
   &_items
     width 100%
@@ -47,16 +47,18 @@
     grid-template-columns repeat(3, auto)
 
     @media (max-width bPhone)
-      display flex
-      flex-wrap wrap
-      justify-content space-evenly
+      grid-template-columns repeat(2, auto)
+
+    @media (max-width bSmallestPhone)
+      grid-template-columns repeat(1, auto)
 
   &_item
     width 270px
     display flex
     align-items center
     flex-direction column
-    margin-bottom 40px
+    //margin-bottom 40px
+    margin 0 auto 40px
 
     @media (max-width bTablet)
       width 240px
