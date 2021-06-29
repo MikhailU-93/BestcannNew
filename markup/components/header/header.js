@@ -58,8 +58,6 @@ const nav = $('.header_nav');
 
 $(document).on('scroll', function() {
   let docScroll = $(document).scrollTop();
-  //console.log(docScroll);
-  console.log($(window).width());
 
   if ($(window).width() > 999 ) {
     if (docScroll > headerHeight) {
