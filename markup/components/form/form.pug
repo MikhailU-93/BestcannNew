@@ -11,14 +11,14 @@ mixin form(data)
           input.form_input(id="name-input", type="text", placeholder="Владимир", name="Name", maxlength="15")
         .form_inputGroup
           label.form_label(for="tel-input") <strong>*</strong> Ваш телефон:
-          input.form_input(id="tel-input", type="tel", placeholder="+79509509595", name="Tel" required)
+          input.form_input(id="tel-input", type="tel", placeholder="+79509509595", name="Tel" maxlength="12" required)
 
       .form_line.selectGroup
         .form_inputGroup
           label.form_label(for="mark-input") Марка авто:
           select.form_input(id="mark-input")
-            option.form_option(selected) Выберите модель
-            option.form_option Ауди 1
+            option.form_option(selected) Выберите модель Выберите модель
+            option.form_option Ауди 1 Ауди 1 Ауди 1 Ауди 1
             option.form_option Мазда 2 
             option.form_option Ауди 3 
             option.form_option Мазда 4
@@ -39,9 +39,9 @@ mixin form(data)
       .form_line
         .form_inputGroup
           label.form_label(for="year-input") Год выпуска:
-          input.form_input(id="year-input", type="number", placeholder="2007", name="Number" maxlength="4")
+          input.form_input(id="year-input", type="number", placeholder="2007", name="Year")
         .form_inputGroup
           label.form_label(for="budget-input") Ваш бюджет:
-          input.form_input(id="budget-input", type="number", placeholder="300 000", name="Budget" maxlength="12")
+          input.form_input(id="budget-input", type="number", placeholder="300 000", name="Budget")
 
       button.form_btn.formLink(type="submit") Отправить

@@ -4,6 +4,12 @@ $('.whatCheck_item').on('touchstart', function () {
   $(this).toggleClass('-hover');
 });
 
+$(document).on('scroll', function() {
+  if ($('.whatCheck_item.-hover')) {
+    $('.whatCheck_item').removeClass('-hover');
+  }
+});
+
 if ($(window).width() < 480) {
   $('.whatCheck_slider').addClass('swiper-container');
   $('.whatCheck_items').addClass('swiper-wrapper');
