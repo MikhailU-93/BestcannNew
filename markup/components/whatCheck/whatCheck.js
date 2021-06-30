@@ -1,5 +1,9 @@
 import $ from 'jquery';
 
+$('.whatCheck_item').on('touchstart', function () {
+  $(this).toggleClass('-hover');
+});
+
 if ($(window).width() < 480) {
   $('.whatCheck_slider').addClass('swiper-container');
   $('.whatCheck_items').addClass('swiper-wrapper');

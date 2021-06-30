@@ -10,9 +10,20 @@ mixin whatCheck(data)
           .whatCheck_items
             each item in data.items
               .whatCheck_item
-                span.whatCheck_cloud= item.info
-                img.whatCheck_photo(src= item.photo, alt="")
-                span.whatCheck_nameWrap
-                  h3.whatCheck_name.subtitle= item.name
+                //- дубликат
+                .whatCheck_duplicate
+                  img.whatCheck_photo(src= item.photo, alt="")
+                  span.whatCheck_nameWrap
+                    h3.whatCheck_name.subtitle= item.name
+                //- оригинал
+                .whatCheck_flipper
+                  .whatCheck_front
+                    img.whatCheck_photo(src= item.photo, alt="")
+                    span.whatCheck_nameWrap
+                      h3.whatCheck_name.subtitle= item.name
+
+                  .whatCheck_back= item.info
+                  
+                  
 
           .swiper-pagination
