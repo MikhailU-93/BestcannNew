@@ -232,6 +232,15 @@
     height 100%
     display flex
     align-items center
+    margin-bottom 10px
+
+  &_priceWrap
+    display flex
+    align-items center
+
+  &_priceTitle
+    display block
+    margin-right 10px
 
   &_footLine
     width 100%
@@ -250,14 +259,11 @@
       justify-content space-between
 
     @media (max-width bSmallestPhone)
-      flex-direction column
+      //flex-direction column
 
   &_more
     @media (max-width bTablet)
-      margin-right 20px
-
-    @media (max-width bSmallestPhone)
-      margin 0 0 10px 0
+      margin-right 5px
 
   &_more,
   &_formLink
@@ -274,6 +280,9 @@
 
     @media (max-width bPhone)
       padding 12px 16px
+
+    @media (max-width bSmallestPhone)
+      padding 10px
 
   &_notice
     display block

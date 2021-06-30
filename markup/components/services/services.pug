@@ -17,6 +17,10 @@ mixin services(data)
                   h3.services_subtitle.subtitle.-darkTheme= item.name
                   span.services_info= item.info
 
+                  span.services_priceWrap
+                    span.services_priceTitle.subtitle.-darkTheme Стоимость:
+                    span.services_price от 15 000р
+
                 .services_footLine
                   a.services_more.popup-link(href=`#popup-service-${index}`) Подробнее
                   a.services_formLink.popup-link(href='#main-form') Оставить заявку
