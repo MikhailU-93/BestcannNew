@@ -27,4 +27,8 @@ if ($(window).width() < 480) {
   $('.whatCheck_btn.-prev').on('click', function() {
     swiperWhatCheck.slidePrev();
   });
+
+  swiperWhatCheck.on('slideChange', function () {
+    $('.whatCheck_item').removeClass('-hover');
+  });
 }

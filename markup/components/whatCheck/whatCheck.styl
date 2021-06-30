@@ -222,6 +222,11 @@
 
     text-align center
 
+    animation-name scaleName
+    animation-duration .8s
+    animation-timing-function linear
+    animation-iteration-count infinite
+
     &::before
       content ''
       position absolute
@@ -244,3 +249,12 @@
         bottom -5px
 
         width 60px
+
+@keyframes scaleName
+  from 
+    transform scale(1)
+  50%
+    transform scale(1.05, 1.05)
+  to 
+    transform scale(1)
+      
