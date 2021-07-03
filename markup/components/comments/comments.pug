@@ -11,13 +11,8 @@ mixin comments(data)
           .comments_items.swiper-wrapper
             each item in data.items
               .comments_item.swiper-slide
-                .comments_photosWrap
-                  .comments_mainPhoto
-                    each photo in item.photo
-                      img.comments_photo(src= photo, alt="")
-                  .comments_previews
-                    each preview in item.photo
-                      img.comments_preview(src= preview, alt="")
+                img.comments_photo(src= item.photo, alt="")
+
                 .comments_info
                   span.comments_desc.subtitle= item.desc 
 

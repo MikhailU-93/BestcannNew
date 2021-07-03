@@ -144,9 +144,17 @@
     @media (max-width bSmallestPhone)
       box-shadow: 0 5px 10px rgba(0,0,0,0.25), 0 3px 3px rgba(0,0,0,0.22)
 
-  &_photosWrap
+  &_photo
     flex-shrink 0
+    display block
+    border-radius 15px 15px 0 0
+    overflow hidden
     width 100%
+    height 100%
+
+    object-position center
+    object-fit cover
+
     height 250px
     margin-right 20px
 
@@ -155,31 +163,13 @@
 
     @media (max-width bPhone)
       height 200px
+      border-radius 15px 15px 0 0
 
     @media (max-width bSmallPhone)
       height 180px
     
     @media (max-width bSmallestPhone)
       height 140px
-
-  &_mainPhoto
-    flex-shrink 0
-    width 100%
-    height 100%
-    border-radius 15px 15px 0 0
-    overflow hidden
-    margin-bottom 10px
-
-    @media (max-width bPhone)
-      border-radius 15px 15px 0 0
-
-  &_photo
-    display block
-    width 100%
-    height 100%
-
-    object-position center
-    object-fit cover
 
     &.-active
       display block
