@@ -10,7 +10,8 @@ mixin services(data)
           .services_items.swiper-wrapper
             each item, index in data.items
               .services_item.swiper-slide
-                .services_photoWrap 
+                .services_photoWrap
+                  .services_filter(style="background-color: rgba(55, 211, 211, .6);")
                   img.services_photo(src= item.photo, alt="")
 
                 span.services_infoGroup 
