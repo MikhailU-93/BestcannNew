@@ -16,35 +16,31 @@ mixin form(data)
       .form_line.selectGroup
         .form_inputGroup
           label.form_label(for="mark-input") Марка авто:
-          select.form_input(id="mark-input", size="5")
-            option.form_option(selected) Выберите модель Выберите модель
-            option.form_option Ауди 1 Ауди 1 Ауди 1 Ауди 1
-            option.form_option Мазда 2 
-            option.form_option Ауди 3 
-            option.form_option Мазда 4
-            option.form_option Ауди 5
-            option.form_option Мазда 6
-            option.form_option Мазда 2 
-            option.form_option Ауди 3 
-            option.form_option Мазда 4
-            option.form_option Ауди 5
-            option.form_option Мазда 6
+          select.form_input.form_select.-brands(id="mark-input")
+            option.form_option(selected, data-id="0") Выберите марку
+            option.form_option.-brands(data-id="1") Ауди 1
+            option.form_option.-brands(data-id="2") Мазда 2 
+            option.form_option.-brands(data-id="3") Ниссан 3 
 
         .form_inputGroup
           label.form_label(for="model-input") Модель авто:
-          select.form_input(id="model-input", size="5")
-            option.form_option(selected) Выберите марку
-            option.form_option Ауди 1
-            option.form_option Мазда 2 
-            option.form_option Ауди 3 
-            option.form_option Мазда 4
-            option.form_option Ауди 5
-            option.form_option Мазда 6
-            option.form_option Мазда 2 
-            option.form_option Ауди 3 
-            option.form_option Мазда 4
-            option.form_option Ауди 5
-            option.form_option Мазда 6
+          select.form_input.form_select.-models(id="model-input", data-id="0")
+            option.form_option(selected) Выберите Модель
+          select.form_input.form_select.-models(id="model-input" data-id="1")
+            option.form_option(selected) Выберите Модель
+            option.form_option Ауди модель 1
+            option.form_option Ауди модель 2
+            option.form_option Ауди модель 3
+          select.form_input.form_select.-models(id="model-input" data-id="2")
+            option.form_option(selected) Выберите Модель
+            option.form_option Мазда модель 1
+            option.form_option Мазда модель 2
+            option.form_option Мазда модель 3
+          select.form_input.form_select.-models(id="model-input" data-id="3")
+            option.form_option(selected) Выберите Модель
+            option.form_option Ниссан модель 1
+            option.form_option Ниссан модель 2
+            option.form_option Ниссан модель 3
 
       .form_line
         .form_inputGroup

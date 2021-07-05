@@ -18,11 +18,11 @@ $CustomFont: 'CustomFont', Helvetica, Arial, sans-serif;
 */
 
 dir = '../fonts'
-font-face(name = sans-serif, weight = normal, style = normal) 
-  @font-face 
+font-face(name, weight, style)
+  @font-face
     font-family name
-    src url('`${dir}/${name}/${name}-${weight}-${style}.woff2`') format('woff2'),
-    url('`${dir}/${name}/${name}-${weight}-${style}.woff`') format('woff')
+    src url(dir/name/name\-weight\-style.woff2) format('woff2'),
+    url(dir/name/name\-weight\-style.woff) format('woff')
     font-weight weight
     font-style style
 
