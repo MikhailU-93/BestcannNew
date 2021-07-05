@@ -89,7 +89,7 @@
     @media (max-width bSmallestPhone)
       font-size 12px
 
-  & form
+  &_main
     width 100%
     max-width 1000px
     margin 0 auto 50px
@@ -104,15 +104,6 @@
     @media (max-width bPhone)
       margin-bottom 30px
 
-    & br
-      display none
-
-    & .ajax-loader
-      display none
-
-    & p
-      margin 0
-
   &_pic
     display block
     width 447px
@@ -124,7 +115,7 @@
     @media (max-width bSmallTablet)
       display none
 
-  &_form
+  & form
     display flex
     flex-direction column
     align-items center
@@ -155,6 +146,15 @@
 
     @media (max-width bSmallestPhone)
       box-shadow: 0 5px 10px rgba(0,0,0,0.25), 0 3px 3px rgba(0,0,0,0.22)
+
+    & br
+      display none
+
+    & .ajax-loader
+      display none
+
+    & p
+      margin 0
 
 
   &_inputGroup
@@ -214,3 +214,6 @@
     
     color red
     text-align center
+
+  & .wpcf7-response-output
+    color main-color-2
