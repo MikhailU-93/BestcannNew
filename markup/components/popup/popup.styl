@@ -36,6 +36,8 @@
     height 100%
     box-sizing border-box
 
+    cursor pointer
+
   &_contentWrap
     position relative
 
@@ -58,6 +60,41 @@
     right -20px
     top 5px
 
-    font-size 20px
-    text-decoration none
-    color main-color-1
+    display block
+
+    cursor pointer
+
+  &_icon
+    position relative
+
+    display block
+    width 15px
+    height 15px
+
+    background-image url(__static__assets/popup/close-icon.png)
+    background-repeat no-repeat
+    background-position center
+    background-size contain
+
+    &:hover::before
+      opacity 1
+      visibility visible
+
+    &::before
+      content ''
+      position absolute
+      top 0
+      left 0
+
+      width 100%
+      height 100%
+
+      background-image url(__static__assets/popup/hover-close-icon.png)
+      background-repeat no-repeat
+      background-position center
+      background-size contain
+
+      opacity 0
+      visibility hidden
+
+      transition .2s all
