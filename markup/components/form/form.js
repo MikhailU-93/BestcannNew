@@ -12,8 +12,8 @@ const modelsSelect = $('.form_select.-models');
 brandsSelect.addClass('-active');
 modelsSelect.eq(0).addClass('-active');
 
-brandsOption.on('click', function() {
-  const selectedIndex = $(this).index();
+brandsOption.on('click', function(e) {
+  const index = $(this).index();
   //console.log(selectedIndex);
   console.log(123);
 

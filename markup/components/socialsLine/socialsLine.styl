@@ -69,17 +69,35 @@ hoverSocials = {
     transform translate(-50%, -50%)
 
     display block
-    width 72px
+    width 152px
     height auto
 
     object-fit contain
     object-position center
 
-    @media (max-width bSmallPhone)
-      width 63px
+    @media (max-width bTablet)
+      width 130px
 
     @media (max-width bSmallestPhone)
-      width 55px
+      display none
+
+  &_mobileLogo
+    position absolute
+    left 50%
+    top 50%
+    transform translate(-50%, -50%)
+
+    display none
+    width 82px
+    height auto
+
+    object-fit contain
+    object-position center
+
+    @media (max-width bSmallestPhone)
+      display block
+      width 57px
+  
 
   &_linkGroup
     display flex
