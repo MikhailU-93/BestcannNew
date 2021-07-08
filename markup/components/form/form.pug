@@ -1,6 +1,6 @@
 mixin form(data)
   .form.popup-item(id="detailed-form")
-    img.form_logo(src="__static__img/assets/header/logo.png", alt="")
+    img.form_logo(src="__static__img/assets/socialsLine/main-logo.png", alt="")
 
     h3.form_title.subtitle Заголовок для формы отправки заявки
 
@@ -17,7 +17,7 @@ mixin form(data)
         .form_inputGroup
           label.form_label(for="mark-input") Марка авто:
           select.form_input.form_select.-brands(id="mark-input")
-            option.form_option(selected, data-id="0") Выберите марку
+            option.form_option(data-id="0") Выберите марку
             option.form_option.-brands(data-id="1") Ауди 1
             option.form_option.-brands(data-id="2") Мазда 2 
             option.form_option.-brands(data-id="3") Ниссан 3 
@@ -25,19 +25,19 @@ mixin form(data)
         .form_inputGroup
           label.form_label(for="model-input") Модель авто:
           select.form_input.form_select.-models(id="model-input", data-id="0")
-            option.form_option(selected) Выберите Модель
+            option.form_option Выберите Модель
           select.form_input.form_select.-models(id="model-input" data-id="1")
-            option.form_option(selected) Выберите Модель
+            option.form_option Выберите Модель
             option.form_option Ауди модель 1
             option.form_option Ауди модель 2
             option.form_option Ауди модель 3
           select.form_input.form_select.-models(id="model-input" data-id="2")
-            option.form_option(selected) Выберите Модель
+            option.form_option Выберите Модель
             option.form_option Мазда модель 1
             option.form_option Мазда модель 2
             option.form_option Мазда модель 3
           select.form_input.form_select.-models(id="model-input" data-id="3")
-            option.form_option(selected) Выберите Модель
+            option.form_option Выберите Модель
             option.form_option Ниссан модель 1
             option.form_option Ниссан модель 2
             option.form_option Ниссан модель 3
@@ -51,3 +51,6 @@ mixin form(data)
           input.form_input(id="budget-input", type="number", placeholder="300 000", name="Budget")
 
       button.form_btn.formLink(type="submit") Отправить
+
+      span.form_notice.-success Спасибо! Заявка отправлена.
+      span.form_notice.-error Ошибка! Не удалось отправить заявку. Проверьте вводимые данные или попробуйте позже.

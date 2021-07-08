@@ -19,16 +19,19 @@
 
   &_logo
     display block
-    width 80px
+    width 152px
     height auto
     margin-bottom 30px
 
     object-fit contain
     object-position center
 
+    @media (max-width bTablet)
+      width 130px
+
     @media (max-width bSmallestPhone)
-      width 60px
-      margin-bottom 20px
+      width 110px
+      margin-bottom 15px
 
   &_title
     margin-bottom 40px
