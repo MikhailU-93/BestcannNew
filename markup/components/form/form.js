@@ -1,11 +1,10 @@
 import $, { ajax } from 'jquery';
+import mask from 'jquery.maskedinput/src/jquery.maskedinput';
 
 const form = $('.form_main');
 const action = form.attr('action');
-
 const brandsSelect = $('.form_select.-brands');
 const brandsOption = brandsSelect.children('.form_option');
-
 const modelsSelect = $('.form_select.-models');
 const modelsOption = modelsSelect.children('.form_option');
 
@@ -21,6 +20,9 @@ brandsSelect.on('change', function(e) {
 
   modelsSelect.eq(index).addClass('-active');
 });
+
+form.find('input[name=Tel]').mask("+7 (999) 999-99-99");
+
 
 form.on('submit', function(e) {
   const formName = form.find('input[name=Name]').val();
