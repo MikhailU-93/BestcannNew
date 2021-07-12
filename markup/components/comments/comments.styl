@@ -158,47 +158,18 @@
     height 250px
     margin-right 20px
 
-    @media (max-width bTablet)
-      height 220px
-
     @media (max-width bPhone)
-      height 200px
+      height 240px
       border-radius 15px 15px 0 0
 
     @media (max-width bSmallPhone)
-      height 180px
+      height 210px
     
     @media (max-width bSmallestPhone)
       height 140px
 
     &.-active
       display block
-
-  &_previews
-    width 100%
-    display none
-
-  &_preview
-    flex-shrink 0
-    display block
-    height 40px
-    margin-right 5px
-    width 70px
-    border-radius 5px
-    border 5px solid transparent
-
-    object-fit cover
-    object-position center
-
-    transition .2s all
-
-    cursor pointer
-
-    &.-active
-      border 5px solid hover-color
-
-    &:last-child
-      margin-right 0
 
   &_info
     width 100%

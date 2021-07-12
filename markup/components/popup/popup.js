@@ -33,7 +33,6 @@ function popupClose(popupActive) {
   if (unlock) {
     popup.removeClass("-show");
     popupActive.removeClass("-show");
-    $('.form_notice').removeClass('-active');
   }
 }
 
