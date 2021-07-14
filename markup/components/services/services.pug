@@ -12,7 +12,13 @@ mixin services(data)
               .services_item.swiper-slide
                 .services_photoWrap
                   .services_filter(style="background-color: rgba(55, 211, 211, .6);")
-                  img.services_photo(src= item.photo, alt="")
+                  picture
+                    source.services_photo(type="image/webp" media="(max-width: 639px)" srcset="__static__img/assets/services/pic-2w.webp")
+                    source.services_photo(type="image/webp" srcset="__static__img/assets/services/pic-1w.webp")
+                    
+                    source.services_photo(srcset="__static__img/assets/services/pic-2j.jpg"  media="(max-width: 639px)")
+                    img.services_photo(src="__static__img/assets/services/pic-1j.jpg")
+                  //- img.services_photo(src= item.photo, alt="")
 
                 span.services_infoGroup 
                   h3.services_subtitle.subtitle.-darkTheme= item.name
