@@ -1,10 +1,13 @@
 .about
+  position relative
+  z-index 5
+
   padding 80px 0 50px
   
-  background-image url(__static__assets/about/back.jpg)
-  background-repeat no-repeat
-  background-size 925px 680px
-  background-position -10% 50%
+  // background-image url(__static__assets/about/back.jpg)
+  // background-repeat no-repeat
+  // background-size 925px 680px
+  // background-position -10% 50%
 
   @media (max-width bDesktop)
     background-position -40% 50%
@@ -38,6 +41,22 @@
     background-size 490px 360px
     background-position -150px 50px
 
+  &_bg
+    position absolute
+    left -10%
+    top 50%
+    transform translateY(-50%)
+
+    display block
+    width 925px
+    height auto
+
+    object-fit contain
+    object-position center
+
+    user-select none
+    pointer-events none
+
   &_wrap
     max-width ContentWidth
     margin 0 auto
@@ -56,6 +75,9 @@
       padding 0 10px
 
   &_main
+    position relative
+    z-index 5
+
     display flex
     align-items center
     justify-content space-between
@@ -124,6 +146,9 @@
     display block
     width 270px
     height 605px
+
+    user-select none
+    pointer-events none
 
     @media (max-width bSmallTablet)
       width 162px

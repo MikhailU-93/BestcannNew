@@ -1,10 +1,7 @@
 .whatUse
-  padding 80px 0 50px
+  position relative
 
-  background-image url(__static__assets/whatUse/back.jpg)
-  background-repeat no-repeat
-  background-position 0 100%
-  background-size contain
+  padding 80px 0 50px
 
   @media (max-width bTablet)
     padding 60px 0 40px
@@ -23,7 +20,26 @@
   @media (max-width bSmallestPhone)
     padding 30px 0 20px
 
+  &_bg
+    position absolute
+    left 0
+    top 100%
+    transform translateY(-100%)
+
+    display block
+    width auto
+    height auto
+
+    object-fit contain
+    object-position center
+
+    user-select none
+    pointer-events none
+
   &_wrap
+    position relative
+    z-index 5
+
     max-width ContentWidth
     margin 0 auto
 
