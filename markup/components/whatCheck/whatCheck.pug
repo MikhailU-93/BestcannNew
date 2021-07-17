@@ -1,5 +1,6 @@
 mixin whatCheck(data)
   section.whatCheck.section(id='whatCheck')
+    img.whatCheck_bg(src="__static__img/assets/whatCheck/back-1.jpg", alt="")
     .whatCheck_wrap
       h2.whatCheck_title.title Что мы проверяем?
       .whatCheck_sliderWrap
@@ -12,13 +13,18 @@ mixin whatCheck(data)
               .whatCheck_item
                 //- дубликат
                 .whatCheck_duplicate
-                  img.whatCheck_photo(src= item.photo, alt="")
+                  div.whatCheck_photo
                   span.whatCheck_nameWrap
                     h3.whatCheck_name.subtitle= item.name
                 //- оригинал
                 .whatCheck_flipper
                   .whatCheck_front
-                    img.whatCheck_photo(src= item.photo, alt="")
+                    //- img.whatCheck_photo(src= item.photo, alt="")
+                    picture.whatCheck_photo
+                      source(type="image/webp" srcset="__static__img/assets/whatCheck/pic-2w.webp")
+                      source(type="image/webp" srcset="__static__img/assets/whatCheck/pic-1w.webp")
+                      
+                      img(src="__static__img/assets/whatCheck/pic-2j.jpeg")
                     span.whatCheck_nameWrap
                       h3.whatCheck_name.subtitle= item.name
 

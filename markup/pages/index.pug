@@ -27,8 +27,14 @@ html(class="no-js", lang="ru")
 
     .wrap.section
       .video_wrap
-        video(src="__static__img/general/30.mp4" autoplay='autoplay', loop='loop', muted='muted')
-        img(src="__static__img/general/header.jpg", alt="")
+        video(src="__static__img/general/30.webm" autoplay='autoplay', loop='loop', muted='muted')
+        picture
+          source(media="(max-width: 639px)" type="image/webp" srcset="__static__img/general/header-1.webp")
+          source(type="image/webp" srcset="__static__img/general/header.webp")
+
+          source(media="(max-width: 639px)" type="image/webp" srcset="__static__img/general/header-1.jpg")
+          source(type="image/webp" srcset="__static__img/general/header.webp")
+          img(src="__static__img/general/header.jpg", alt="")
       +header(header.main)
       +main()
     +whatCheck(whatCheck.main)

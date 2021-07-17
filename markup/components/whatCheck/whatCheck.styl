@@ -1,10 +1,12 @@
 .whatCheck
+  position relative
+
   padding 80px 0 50px
 
-  background-image url(__static__assets/whatCheck/back-1.jpg)
-  background-repeat no-repeat
-  background-size contain
-  background-position 100% 0
+  // background-image url(__static__assets/whatCheck/back-1.jpg)
+  // background-repeat no-repeat
+  // background-size contain
+  // background-position 100% 0
 
   @media (max-width bTablet)
     padding 60px 0 40px
@@ -19,6 +21,19 @@
 
   @media (max-width bSmallPhone)
     padding 30px 0 20px
+
+  &_bg
+    position absolute
+    left 100%
+    top 0
+    transform translateX(-100%)
+
+    display block
+    width auto
+    height auto
+
+    object-fit contain
+    object-position center
 
   &_wrap
     max-width ContentWidth
@@ -184,13 +199,17 @@
     flex-direction column
 
   &_photo
-    display block
+    position relative
+    
     width 100%
     height 170px
     border-radius 15px 15px 0 0
 
-    object-fit cover
-    object-position center
+    & > *
+      border-radius 15px 15px 0 0
+
+      object-fit cover
+      object-position center
 
     @media (max-width bTablet)
       height 150px
