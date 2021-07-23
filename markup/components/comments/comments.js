@@ -21,7 +21,7 @@ const swiperComments = new Swiper('.comments_slider', {
     },
     480: {
       centeredSlides: true,
-      spaceBetween: 45,
+      spaceBetween: 55,
     },
     320: {
       centeredSlides: true,
