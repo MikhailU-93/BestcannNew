@@ -221,8 +221,11 @@
     & > *
       border-radius 15px 15px 0 0
 
-      object-fit contain
+      object-fit cover
       object-position center
+      
+    &.-contain > *
+      object-fit: contain
 
     @media (max-width bTablet)
       height 150px
