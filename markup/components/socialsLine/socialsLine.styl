@@ -51,9 +51,6 @@ hoverSocials = {
     @media (max-width bPhone)
       padding 15px
 
-    @media (max-width bSmallPhone)
-      padding 10px
-
   &_group
     display flex
     align-items center
@@ -69,14 +66,14 @@ hoverSocials = {
     transform translate(-50%, -50%)
 
     display block
-    width 152px
+    width 165px
     height auto
 
     object-fit contain
     object-position center
 
     @media (max-width bTablet)
-      width 130px
+      width 150px
 
     @media (max-width bSmallestPhone)
       display none
@@ -96,7 +93,7 @@ hoverSocials = {
 
     @media (max-width bSmallestPhone)
       display block
-      width 57px
+      width 75px
   
 
   &_linkGroup
@@ -132,12 +129,6 @@ hoverSocials = {
 
     @media (max-width bSmallTablet)
       margin-right 0
-
-    @media (max-width bSmallestPhone)
-      width 25px
-      height 25px
-
-      background-size 12px auto
 
     &::before
       content ''
@@ -179,10 +170,13 @@ hoverSocials = {
 
   &_linkName
     color main-color-1
-    font-size 14px
+    font-size 16px
     font-weight 700
 
     transition .2s all
+
+    @media (max-width bTablet)
+      font-size 14px
 
     @media (max-width bSmallTablet)
       display none
@@ -198,6 +192,8 @@ hoverSocials = {
     display block
     flex-shrink 0
     margin-right 15px
+
+    font-size 16px
 
     @media (max-width bSmallTablet)
       display none
@@ -221,12 +217,6 @@ hoverSocials = {
     background-size 15px auto
     background-position center
     background-repeat no-repeat
-
-    @media (max-width bSmallestPhone)
-      width 25px
-      height 25px
-
-      background-size 12px auto
 
     &:hover
       border 1px solid hover-color
@@ -281,10 +271,6 @@ hoverSocials = {
 
     @media (max-width bSmallTablet)
       display flex
-
-    @media (max-width bSmallestPhone)
-      width 25px
-      height 25px
 
     &:hover,
     &.-active
