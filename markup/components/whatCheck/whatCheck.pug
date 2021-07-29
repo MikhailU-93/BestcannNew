@@ -20,7 +20,7 @@ mixin whatCheck(data)
                 .whatCheck_flipper
                   .whatCheck_front
                     //- img.whatCheck_photo(src= item.photo, alt="")
-                    picture.whatCheck_photo
+                    picture.whatCheck_photo(data-placeholder-background="url(__static__img/general/no_photo.jpg)")
                       source(type="image/webp" srcset="__static__img/assets/whatCheck/pic-2w.webp")
                       source(type="image/webp" srcset="__static__img/assets/whatCheck/pic-1w.webp")
                       

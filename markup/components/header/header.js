@@ -1,4 +1,8 @@
 import $ from 'jquery';
+import lozad from 'lozad';
+
+const el = document.querySelectorAll('picture');
+lozad(el).observe();
 
 $('body').on('click', '.js-scroll-to', function (e) {
   e.preventDefault();

@@ -1,13 +1,26 @@
 import $ from 'jquery';
 
+
+function deleteClass(params) {
+  $('.whatCheck_item').removeClass('-hover');
+}
+
+$('.whatCheck_item').hover(
+  function () {
+    deleteClass();
+    $(this).addClass('-hover');
+  },
+  function () {
+    $(this).removeClass('-hover');
+  }
+);
+
 $('.whatCheck_item').on('touchstart', function () {
   $(this).toggleClass('-hover');
 });
 
 $(document).on('scroll', function() {
-  if ($('.whatCheck_item.-hover')) {
-    $('.whatCheck_item').removeClass('-hover');
-  }
+  deleteClass();
 });
 
 if ($(window).width() < 480) {
@@ -28,13 +41,11 @@ if ($(window).width() < 480) {
   
   $('.whatCheck_btn.-next').on('click', function() {
     swiperWhatCheck.slideNext();
+    deleteClass();
   });
   
   $('.whatCheck_btn.-prev').on('click', function() {
     swiperWhatCheck.slidePrev();
-  });
-
-  swiperWhatCheck.on('slideChange', function () {
-    $('.whatCheck_item').removeClass('-hover');
+    deleteClass();
   });
 }
