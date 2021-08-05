@@ -9,6 +9,7 @@ const swiperWhatUse = new Swiper('.whatUse_slider', {
   speed: 500,
   pagination: {
     el: '.swiper-pagination',
+    bulletClass: 'swiper-pagination-bullet animateEl',
     clickable: true,
   },
   breakpoints: {

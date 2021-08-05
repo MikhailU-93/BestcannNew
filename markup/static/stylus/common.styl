@@ -33,6 +33,14 @@ html, body
       height 12px
       margin 0 6px
 
+      for $j in (1..12)
+        &:nth-child({$j})
+          animation-delay: ($j) * .2s
+
+      &.-animate
+        animation-name fadeInDown
+        animation-fill-mode forwards
+
       @media (max-width bSmallestPhone)
         width 9px
         height 9px
@@ -329,11 +337,3 @@ picture
   to
     opacity 1
     transform translateY(0, 0)
-
-// customAnim(x, y)
-//   @keyframes fadeInDown
-//     from
-//       transform translate(x, 100%)
-//     to
-//       opacity 1
-//       transform translate(x, y)

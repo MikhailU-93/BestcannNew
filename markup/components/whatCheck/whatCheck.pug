@@ -4,9 +4,9 @@ mixin whatCheck(data)
     .whatCheck_wrap
       h2.whatCheck_title.title.animateEl Что мы проверяем?
       .whatCheck_sliderWrap
-        != pugHelpers.Icon.call(locals, {iconName: 'arrow-left', className: 'whatCheck_btn -prev', iconWidth: '35', iconHeight: '75'})
+        != pugHelpers.Icon.call(locals, {iconName: 'arrow-left', className: 'whatCheck_btn -prev animateEl', iconWidth: '35', iconHeight: '75'})
         
-        != pugHelpers.Icon.call(locals, {iconName: 'arrow-right', className: 'whatCheck_btn -next', iconWidth: '30', iconHeight: '20'})
+        != pugHelpers.Icon.call(locals, {iconName: 'arrow-right', className: 'whatCheck_btn -next animateEl', iconWidth: '30', iconHeight: '20'})
         .whatCheck_slider
           .whatCheck_items
             each item in data.items

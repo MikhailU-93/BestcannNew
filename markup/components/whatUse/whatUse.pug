@@ -4,13 +4,13 @@ mixin whatUse(data)
     .whatUse_wrap
       h2.whatUse_title.title.animateEl Что мы используем?
       .whatUse_sliderWrap
-        != pugHelpers.Icon.call(locals, {iconName: 'arrow-left', className: 'whatUse_btn -prev', iconWidth: '35', iconHeight: '75'})
+        != pugHelpers.Icon.call(locals, {iconName: 'arrow-left', className: 'whatUse_btn -prev animateEl', iconWidth: '35', iconHeight: '75'})
         
-        != pugHelpers.Icon.call(locals, {iconName: 'arrow-right', className: 'whatUse_btn -next', iconWidth: '30', iconHeight: '20'})
+        != pugHelpers.Icon.call(locals, {iconName: 'arrow-right', className: 'whatUse_btn -next animateEl', iconWidth: '30', iconHeight: '20'})
         .whatUse_slider.swiper-container
           .whatUse_items.swiper-wrapper
             each item in data.items
-              .whatUse_item.swiper-slide
+              .whatUse_item.swiper-slide.animateEl
                 img.whatUse_photo(src= item.photo, alt="")
                 span.whatUse_infoGroup
                   h3.whatUse_name.subtitle= item.name
