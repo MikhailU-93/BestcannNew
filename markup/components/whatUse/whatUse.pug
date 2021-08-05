@@ -2,7 +2,7 @@ mixin whatUse(data)
   section.whatUse.section(id='whatUse')
     img.whatUse_bg(src="__static__img/assets/whatUse/back.jpg", alt="")
     .whatUse_wrap
-      h2.whatUse_title.title Что мы используем?
+      h2.whatUse_title.title.animateEl Что мы используем?
       .whatUse_sliderWrap
         != pugHelpers.Icon.call(locals, {iconName: 'arrow-left', className: 'whatUse_btn -prev', iconWidth: '35', iconHeight: '75'})
         

@@ -2,20 +2,20 @@ mixin socialsLine(data)
   section.socialsLine
     .socialsLine_headLine
       .socialsLine_wrap
-        img.socialsLine_logo(src= data.logo, alt="")
+        img.socialsLine_logo.animateEl(src= data.logo, alt="")
         img.socialsLine_mobileLogo(src= data.mobileLogo, alt="")
 
         .socialsLine_group
-          span.socialsLine_time Пн-Вс 09:00-22:00
+          span.socialsLine_time.animateEl Пн-Вс 09:00-22:00
           .socialsLine_socials
             each social in data.socials
-              a.socialsLine_social(href= social)
+              a.socialsLine_social.animateEl(href= social)
 
         .socialsLine_group
-          a.socialsLine_linkGroup(href= data.tel)
+          a.socialsLine_linkGroup.animateEl(href= data.tel)
             i.socialsLine_linkIcon
             span.socialsLine_linkName= data.tel
-          a.socialsLine_linkGroup(href= data.mail)
+          a.socialsLine_linkGroup.animateEl(href= data.mail)
             i.socialsLine_linkIcon
             span.socialsLine_linkName= data.mail
 

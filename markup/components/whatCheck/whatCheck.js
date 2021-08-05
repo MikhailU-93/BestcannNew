@@ -1,27 +1,8 @@
-import $ from 'jquery';
+// import $ from 'jquery';
+// import Swiper from 'swiper';
+// import SwiperCore, {Pagination} from 'swiper/core';
 
-
-function deleteClass(params) {
-  $('.whatCheck_item').removeClass('-hover');
-}
-
-$('.whatCheck_item').hover(
-  function () {
-    deleteClass();
-    $(this).addClass('-hover');
-  },
-  function () {
-    $(this).removeClass('-hover');
-  }
-);
-
-$('.whatCheck_item').on('touchstart', function () {
-  $(this).toggleClass('-hover');
-});
-
-$(document).on('scroll', function() {
-  deleteClass();
-});
+// SwiperCore.use([Pagination]);
 
 if ($(window).width() < 480) {
   $('.whatCheck_slider').addClass('swiper-container');
@@ -41,11 +22,41 @@ if ($(window).width() < 480) {
   
   $('.whatCheck_btn.-next').on('click', function() {
     swiperWhatCheck.slideNext();
-    deleteClass();
   });
   
   $('.whatCheck_btn.-prev').on('click', function() {
     swiperWhatCheck.slidePrev();
-    deleteClass();
   });
+
+  swiperWhatCheck.on('slideChange', function() {
+    deleteClass();
+  })
 }
+
+const checkEl = $('.whatCheck_item');
+
+function deleteClass(el = checkEl) {
+  el.removeClass('-hover');
+}
+
+if (('ontouchstart' in $(window)) ||
+(navigator.maxTouchPoints > 0) ||
+(navigator.msMaxTouchPoints > 0)) {
+  checkEl.on('touchstart', function () {
+    $(this).toggleClass('-hover');
+  });
+} else {
+  checkEl.hover(
+    function () {
+      deleteClass();
+      $(this).addClass('-hover');
+    },
+    function () {
+      deleteClass($(this));
+    }
+  );
+}
+
+$(document).on('scroll', function() {
+  deleteClass();
+});

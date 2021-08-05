@@ -2,7 +2,7 @@ mixin whatCheck(data)
   section.whatCheck.section(id='whatCheck')
     img.whatCheck_bg(src="__static__img/assets/whatCheck/back-1.jpg", alt="")
     .whatCheck_wrap
-      h2.whatCheck_title.title Что мы проверяем?
+      h2.whatCheck_title.title.animateEl Что мы проверяем?
       .whatCheck_sliderWrap
         != pugHelpers.Icon.call(locals, {iconName: 'arrow-left', className: 'whatCheck_btn -prev', iconWidth: '35', iconHeight: '75'})
         
@@ -10,7 +10,7 @@ mixin whatCheck(data)
         .whatCheck_slider
           .whatCheck_items
             each item in data.items
-              .whatCheck_item
+              .whatCheck_item.animateEl
                 //- дубликат
                 .whatCheck_duplicate
                   div.whatCheck_photo

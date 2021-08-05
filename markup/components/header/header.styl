@@ -87,6 +87,14 @@
 
     transition .2s all
 
+    &.-animate
+      animation-name fadeInDown
+      animation-fill-mode forwards
+
+    for i in (0..8)
+      &:nth-child({i})
+        animation-delay (i) * .3s
+
     @media (max-width bTablet)
       margin-right 20px
 

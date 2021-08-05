@@ -294,3 +294,46 @@ picture
 
   &:hover
     transform scale(1.1, 1.1)
+
+.-animate
+  animation-duration .8s
+  animation-timing-function linear
+
+.animateEl
+  opacity 0
+
+@keyframes fadeInDown
+  from
+    transform translate(0, 100%)
+  to
+    opacity 1
+    transform translate(0, 0)
+
+@keyframes fadeInDown50
+  from
+    transform translate(-50%, 100%)
+  to
+    opacity 1
+    transform translate(-50%, -50%)
+
+@keyframes fadeInLeft
+  from
+    transform translate(-100%, 0)
+  to
+    opacity 1
+    transform translate(0, 0)
+
+@keyframes fadeInRight
+  from
+    transform translate(100%, 0)
+  to
+    opacity 1
+    transform translateY(0, 0)
+
+// customAnim(x, y)
+//   @keyframes fadeInDown
+//     from
+//       transform translate(x, 100%)
+//     to
+//       opacity 1
+//       transform translate(x, y)

@@ -1,5 +1,5 @@
-import $ from 'jquery';
-import lozad from 'lozad';
+// // import $ from 'jquery';
+// import lozad from 'lozad';
 
 const el = document.querySelectorAll('picture');
 lozad(el).observe();
@@ -29,20 +29,11 @@ $('.socialsLine_menuIcon, .header_close, .header_back').click(function () {
   $('.socialsLine_menuIcon').toggleClass('-active');
 });
 
-$(document).scroll(function () {
-  if ($(window).width() < 1000) {
-    $('.header_nav').removeClass('-active');
-
-    $('.header_back').removeClass('-active');
-    $('.socialsLine_menuIcon').removeClass('-active');
-  }
-});
-
 const navLink = $('.header_navLink');
 navLink.eq(0).addClass('-active');
 
-$(document).on('scroll', function() {
-  let docScroll = $(document).scrollTop();
+function selectNavLink() {
+  const docScroll = $(document).scrollTop();
   const sections = $('.section');
   let sumOfheights = 0;
 
@@ -55,19 +46,61 @@ $(document).on('scroll', function() {
       break;
     }
   }
-});
+}
 
 const headerHeight = $('.header_headLine').innerHeight();
 const nav = $('.header_nav');
 
-$(document).on('scroll', function() {
-  let docScroll = $(document).scrollTop();
+function stickyNav() {
+  const docScroll = $(document).scrollTop();
+  
+  if (docScroll > headerHeight) {
+    nav.addClass('-sticky');
+  } else {
+    nav.removeClass('-sticky');
+  }
+}
 
-  if ($(window).width() > 999 ) {
-    if (docScroll > headerHeight) {
-      nav.addClass('-sticky');
-    } else {
-      nav.removeClass('-sticky');
+function activeMobileNav() {
+  $('.header_nav').removeClass('-active');
+  $('.header_back').removeClass('-active');
+  $('.socialsLine_menuIcon').removeClass('-active');
+}
+
+if ($(window).width() < 1000) {
+  $(document).scroll(function () {
+    activeMobileNav();
+  });
+} else {
+  $(document).ready(function() {
+    stickyNav();
+  });
+  $(document).scroll(function () {
+    stickyNav();
+  });
+}
+
+function useAnimation() {
+  const animeateEl = $('.animateEl');
+  const docScroll = $(document).scrollTop();
+
+  for (let i = 0; i < animeateEl.length; i++) {
+    const el = animeateEl.eq(i);
+    const windowHeight = $(window).height();
+    const elScrollPos = el.offset().top;
+
+    if (docScroll + windowHeight >= elScrollPos) {
+      el.addClass('-animate');
     }
   }
+}
+
+$(document).ready(function() {
+  selectNavLink();
+  useAnimation();
+});
+
+$(document).on('scroll', function() {
+  selectNavLink();
+  useAnimation();
 });

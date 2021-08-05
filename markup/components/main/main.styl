@@ -57,6 +57,10 @@
 
     text-align center
 
+    &.-animate
+      animation-name fadeInLeft
+      animation-fill-mode forwards
+
     @media (max-width bLaptop)
       margin 0 0 20px
 
@@ -87,6 +91,12 @@
 
     text-align center
 
+    animation-delay .3s
+
+    &.-animate
+      animation-name fadeInRight
+      animation-fill-mode forwards
+
     @media (max-width bLaptop)
       margin-bottom 45px
 
@@ -114,6 +124,7 @@
       font-size 15px
 
   &_link
-    // transition .2s all
-    // &:hover
-    //   transform scale(1.1, 1.1)
+    animation-delay .6s
+    &.-animate
+      animation-name fadeInDown
+      animation-fill-mode forwards

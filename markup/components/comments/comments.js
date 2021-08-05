@@ -1,4 +1,8 @@
-import $ from 'jquery';
+// import $ from 'jquery';
+// import Swiper from 'swiper';
+// import SwiperCore, {Pagination} from 'swiper/core';
+
+// SwiperCore.use([Pagination]);
 
 const swiperComments = new Swiper('.comments_slider', {
   loop: true,

@@ -1,4 +1,8 @@
-import $ from 'jquery';
+// import $ from 'jquery';
+// import Swiper from 'swiper';
+// import SwiperCore, {Pagination} from 'swiper/core';
+
+// SwiperCore.use([Pagination]);
 
 const swiperServices = new Swiper('.services_slider', {
   loop: true,

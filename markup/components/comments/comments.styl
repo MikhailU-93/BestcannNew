@@ -206,7 +206,8 @@
       margin-bottom 5px
 
   &_for
-    display block
+    display flex
+    flex-wrap wrap
     margin-bottom 10px
 
     color rgba(0, 0, 0, .6)
@@ -216,6 +217,14 @@
 
     @media (max-width bSmallestPhone)
       margin-bottom 5px
+
+  &_link
+    display block
+    margin 0 2px
+
+    text-decoration underline
+
+    color hover-color
 
   &_subtitle
     display block

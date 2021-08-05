@@ -1,4 +1,4 @@
-import $ from 'jquery';
+// import $ from 'jquery';
 
 const popupLink = $(".popup-link");
 const popupCloseEl = $(".popup-close");
