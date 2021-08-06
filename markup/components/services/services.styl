@@ -41,6 +41,10 @@
   &_title
     margin 0 0 50px
 
+    &.-animate
+      animation-name fadeInDown
+      animation-fill-mode forwards
+
     @media (max-width bTablet)
       margin 0 0 30px
 
@@ -80,6 +84,8 @@
     fill main-color-1
     transition .2s all
 
+    animation-delay .2s
+
     @media (max-width bTablet)
       width 35px
       height 25px
@@ -97,9 +103,15 @@
 
     &.-prev
       left 0
+      &.-animate
+        animation-name fadeInLeft50
+        animation-fill-mode forwards
     
     &.-next
       right 0
+      &.-animate
+        animation-name fadeInRight50
+        animation-fill-mode forwards
 
   &_slider
     width calc(100% - 100px)
@@ -131,6 +143,12 @@
     overflow hidden
 
     background-color rgba(55, 211, 211, .6)
+
+    animation-delay .2s
+
+    &.-animate
+      animation-name fadeInRight
+      animation-fill-mode forwards
 
     @media (max-width bTablet)
       width 300px
@@ -289,6 +307,7 @@
     @media (max-width bSmallestPhone)
       padding 10px
 
+
   &_notice
     display block
     margin-bottom 30px
@@ -296,7 +315,19 @@
     text-align center
     color main-color-1
 
+    animation-delay .4s
+
+    &.-animate
+      animation-name fadeInLeft
+      animation-fill-mode forwards
+
     @media (max-width bPhone)
       margin-bottom 20px
+
+  &_detailed
+    animation-delay .6s
+    &.-animate
+      animation-name fadeInRight
+      animation-fill-mode forwards
 
   // &_formLink

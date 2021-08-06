@@ -1,15 +1,15 @@
 mixin services(data)
   section.services.section(id='services')
     .services_wrap 
-      h2.services_title.title.-darkTheme Услуги
+      h2.services_title.title.animateEl.-darkTheme Услуги
       .services_sliderWrap
-        != pugHelpers.Icon.call(locals, {iconName: 'arrow-left', className: 'services_btn -prev', iconWidth: '35', iconHeight: '75'})
+        != pugHelpers.Icon.call(locals, {iconName: 'arrow-left', className: 'services_btn -prev animateEl', iconWidth: '35', iconHeight: '75'})
         
-        != pugHelpers.Icon.call(locals, {iconName: 'arrow-right', className: 'services_btn -next', iconWidth: '30', iconHeight: '20'})
+        != pugHelpers.Icon.call(locals, {iconName: 'arrow-right', className: 'services_btn -next animateEl', iconWidth: '30', iconHeight: '20'})
         .services_slider.swiper-container
           .services_items.swiper-wrapper
             each item, index in data.items
-              .services_item.swiper-slide
+              .services_item.swiper-slide.animateEl
                 .services_photoWrap
                   .services_filter(style="background-color: rgba(55, 211, 211, .6);")
                   picture
@@ -33,5 +33,5 @@ mixin services(data)
                   a.services_formLink.popup-link(href='#main-form') Оставить заявку
           .swiper-pagination.-darkTheme
 
-      span.services_notice.subtitle Узнать стоимость услуги
-      a.services_detailed.formLink.popup-link(href='#detailed-form') Подробнее
+      span.services_notice.subtitle.animateEl Узнать стоимость услуги
+      a.services_detailed.formLink.popup-link.animateEl(href='#detailed-form') Подробнее

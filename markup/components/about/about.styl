@@ -80,6 +80,11 @@
     @media (max-width bSmallPhone)
       padding 0 10px
 
+  &_title
+    &.-animate
+      animation-name fadeInDown
+      animation-fill-mode forwards
+
   &_main
     position relative
     z-index 5
@@ -118,6 +123,10 @@
     line-height 28px
     text-align right
 
+    &.-animate
+      animation-name fadeInRight
+      animation-fill-mode forwards
+
     @media (max-width bTablet)
       margin-bottom 40px
 
@@ -148,6 +157,12 @@
       &:last-child
         margin-bottom 0
 
+  &_link
+    animation-delay .2s
+    &.-animate
+      animation-name fadeInRight
+      animation-fill-mode forwards
+
   &_photo
     display block
     width 270px
@@ -155,6 +170,10 @@
 
     user-select none
     pointer-events none
+
+    &.-animate
+      animation-name fadeInLeft
+      animation-fill-mode forwards
 
     @media (max-width bSmallTablet)
       width 162px

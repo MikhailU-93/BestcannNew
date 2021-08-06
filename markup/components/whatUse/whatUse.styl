@@ -103,6 +103,8 @@
     fill main-color-2
     transition .2s all
 
+    animation-delay .2s
+
     @media (max-width bTablet)
       width 35px
       height 25px
@@ -121,13 +123,13 @@
     &.-prev
       left 0
       &.-animate
-        animation-name fadeInLeft
+        animation-name fadeInLeft50
         animation-fill-mode forwards
     
     &.-next
       right 0
       &.-animate
-        animation-name fadeInRight
+        animation-name fadeInRight50
         animation-fill-mode forwards
 
   &_slider
@@ -166,6 +168,8 @@
     overflow hidden
 
     background-color main-color-1
+
+    animation-delay .2s
     
     box-shadow: 0 10px 20px rgba(0,0,0,0.25), 0 7px 7px rgba(0,0,0,0.22)
 
