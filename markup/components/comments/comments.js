@@ -9,6 +9,7 @@ const swiperComments = new Swiper('.comments_slider', {
   speed: 500,
   pagination: {
     el: '.swiper-pagination',
+    bulletClass: 'swiper-pagination-bullet animateEl',
     clickable: true,
   },
   breakpoints: {

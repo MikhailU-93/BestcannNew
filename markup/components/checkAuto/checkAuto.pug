@@ -1,15 +1,15 @@
 mixin checkAuto(data)
   section.checkAuto.section(id='checkAuto')
     .checkAuto_wrap
-      h2.checkAuto_title.title Проверка автомобиля
+      h2.checkAuto_title.title.animateEl Проверка автомобиля
 
-      span.checkAuto_subtitle Поделитесь с нами ссылкой на объявление с сайта по продаже автомобилей
-      span.checkAuto_notice Мы перезвоним и расскажем все возможные подводные камни авто!*
+      span.checkAuto_subtitle.animateEl Поделитесь с нами ссылкой на объявление с сайта по продаже автомобилей
+      span.checkAuto_notice.animateEl Мы перезвоним и расскажем все возможные подводные камни авто!*
 
       .checkAuto_main
-        img.checkAuto_pic(src="__static__img/assets/checkAuto/pic.png", alt="")
+        img.checkAuto_pic.animateEl(src="__static__img/assets/checkAuto/pic.png", alt="")
 
-        form.checkAuto_form(action="")
+        form.checkAuto_form.animateEl(action="")
           .checkAuto_inputGroup
             label.checkAuto_label(for="name-input") Ваше имя:
             input.checkAuto_input(id="name-input", type="text", placeholder="Владимир", name="Name", maxlength="15")

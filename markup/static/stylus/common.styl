@@ -196,6 +196,10 @@ picture
 
   text-align center
 
+  &.-animate
+      animation-name fadeInDown
+      animation-fill-mode forwards
+
   @media (max-width bTablet)
     margin 0 0 70px
 
@@ -306,7 +310,7 @@ picture
     transform scale(1.1, 1.1)
 
 .-animate
-  animation-duration .8s
+  animation-duration .6s
   animation-timing-function linear
 
 .animateEl
@@ -314,42 +318,42 @@ picture
 
 @keyframes fadeInDown
   from
-    transform translate(0, 100%)
+    transform translate(0, 50%)
   to
     opacity 1
     transform translate(0, 0)
 
 @keyframes fadeInDown50
   from
-    transform translate(-50%, 100%)
+    transform translate(-50%, 50%)
   to
     opacity 1
     transform translate(-50%, -50%)
 
 @keyframes fadeInLeft
   from
-    transform translate(-100%, 0)
+    transform translate(-50%, 0)
   to
     opacity 1
     transform translate(0, 0)
 
 @keyframes fadeInLeft50
   from
-    transform translate(-100%, -50%)
+    transform translate(-50%, -50%)
   to
     opacity 1
     transform translate(0, -50%)
 
 @keyframes fadeInRight
   from
-    transform translate(100%, 0)
+    transform translate(50%, 0)
   to
     opacity 1
     transform translateY(0, 0)
 
 @keyframes fadeInRight50
   from
-    transform translate(100%, -50%)
+    transform translate(50%, -50%)
   to
     opacity 1
     transform translateY(0, -50%)

@@ -41,6 +41,12 @@
     font-weight 700
     text-align center
 
+    animation-delay .2s
+
+    &.-animate
+      animation-name fadeInLeft
+      animation-fill-mode forwards
+
     @media (max-width bTablet)
       margin-bottom 20px
 
@@ -67,6 +73,12 @@
     color rgba(0, 0, 0, .3)
     font-size 16px
     text-align center
+
+    animation-delay .2s
+
+    &.-animate
+      animation-name fadeInRight
+      animation-fill-mode forwards
 
     @media (max-width bTablet)
       margin-bottom 40px
@@ -112,6 +124,12 @@
     object-fit contain
     object-position center
 
+    animation-delay .4s
+
+    &.-animate
+      animation-name fadeInLeft
+      animation-fill-mode forwards
+
     & > *
       object-position center
       object-fit contain
@@ -133,6 +151,12 @@
     background-color main-color-1
 
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+
+    animation-delay .4s
+
+    &.-animate
+      animation-name fadeInRight
+      animation-fill-mode forwards
 
     @media (max-width bTablet)
       box-shadow: 0 12px 24px rgba(0,0,0,0.25), 0 8px 8px rgba(0,0,0,0.22)

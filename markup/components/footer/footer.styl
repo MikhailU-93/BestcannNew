@@ -30,6 +30,10 @@
   &_notice
     display block
 
+    &.-animate
+        animation-name fadeInLeft
+        animation-fill-mode forwards
+
     color rgba(255, 255, 255, .6)
 
     @media (max-width bSmallTablet)
@@ -41,6 +45,10 @@
     display block
 
     color rgba(255, 255, 255, .6)
+
+    &.-animate
+        animation-name fadeInRight
+        animation-fill-mode forwards
 
     @media (max-width bSmallTablet)
       text-align center

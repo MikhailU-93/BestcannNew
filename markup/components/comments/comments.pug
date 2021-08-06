@@ -1,16 +1,16 @@
 mixin comments(data)
   section.comments.section(id="comments")
     .comments_wrap
-      h2.comments_title.title Отзывы
+      h2.comments_title.title.animateEl Отзывы
 
       .comments_sliderWrap
-        != pugHelpers.Icon.call(locals, {iconName: 'arrow-left', className: 'comments_btn -prev', iconWidth: '35', iconHeight: '75'})
+        != pugHelpers.Icon.call(locals, {iconName: 'arrow-left', className: 'comments_btn -prev animateEl', iconWidth: '35', iconHeight: '75'})
         
-        != pugHelpers.Icon.call(locals, {iconName: 'arrow-right', className: 'comments_btn -next', iconWidth: '30', iconHeight: '20'})
+        != pugHelpers.Icon.call(locals, {iconName: 'arrow-right', className: 'comments_btn -next animateEl', iconWidth: '30', iconHeight: '20'})
         .comments_slider.swiper-container
           .comments_items.swiper-wrapper
             each item in data.items
-              .comments_item.swiper-slide
+              .comments_item.swiper-slide.animateEl
                 img.comments_photo(src= item.photo, alt="")
 
                 .comments_info

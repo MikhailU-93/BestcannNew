@@ -92,9 +92,15 @@
 
     &.-prev
       left 0
+      &.-animate
+        animation-name fadeInLeft50
+        animation-fill-mode forwards
     
     &.-next
       right 0
+      &.-animate
+        animation-name fadeInRight50
+        animation-fill-mode forwards
 
   &_slider
     width calc(100% - 100px)
@@ -131,6 +137,10 @@
     background-color main-color-1
 
     box-shadow: 0 10px 20px rgba(0,0,0,0.25), 0 7px 7px rgba(0,0,0,0.22)
+
+    &.-animate
+        animation-name fadeInLeft
+        animation-fill-mode forwards
 
     @media (max-width bTablet)
       width 100%
