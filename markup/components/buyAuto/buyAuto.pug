@@ -1,9 +1,9 @@
 mixin buyAuto(data)
   section.buyAuto
     .buyAuto_wrap
-      .buyAuto_title.title Купить авто с нами легко
+      .buyAuto_title.title.animateEl Купить авто с нами легко
       .buyAuto_items
         each item in data.items
-          .buyAuto_item 
+          .buyAuto_item.animateEl
             img.buyAuto_icon(src= item.icon, alt="")
             span.buyAuto_info.subtitle= item.info

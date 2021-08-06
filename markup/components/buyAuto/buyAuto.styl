@@ -1,3 +1,12 @@
+createDelayBuyAuto(itemsInLine, itemsInCol)
+  for $i in (0..itemsInLine)
+    for $j in (1..itemsInCol)
+      $num = (itemsInLine + 1) * ($j) - itemsInLine + ($i)
+      //$num = 4 * ($j) - 3 + ($i) //(0..3)(1..3) для 4х3
+      //$num = 3 * ($j) - 2 + ($i) //(0..2)(1..4) для 3х4
+      //$num = 2 * ($j) - 1 + ($i) //(0..1)(1..6) для 2х6
+      &:nth-child({$num})
+        animation-delay ($i + 1) * .2s
 .buyAuto
   padding 80px 0 50px
 
@@ -32,6 +41,11 @@
     @media (max-width bSmallPhone)
       padding 0 10px
 
+  &_title
+    &.-animate
+      animation-name fadeInDown
+      animation-fill-mode forwards
+
   &_items
     width 100%
     display flex
@@ -47,6 +61,12 @@
     align-items center
     flex-direction column
     margin-bottom 40px
+
+    createDelayBuyAuto(4, 1)
+
+    &.-animate
+      animation-name fadeInDown
+      animation-fill-mode forwards
 
     @media (max-width bTablet)
       width 160px

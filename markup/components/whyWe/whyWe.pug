@@ -2,9 +2,9 @@ mixin whyWe(data)
   section.whyWe.section(id='whyWe')
     img.whyWe_bg(src="__static__img/assets/whyWe/back-1.png", alt="")
     .whyWe_wrap
-      .whyWe_title.title.-darkTheme Почему мы?
+      .whyWe_title.title.-darkTheme.animateEl Почему мы?
       .whyWe_items
         each item in data.items
-          .whyWe_item 
+          .whyWe_item.animateEl
             img.whyWe_icon(src= item.icon, alt="")
             span.whyWe_info.subtitle.-darkTheme= item.info
