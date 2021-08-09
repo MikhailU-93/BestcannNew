@@ -9,6 +9,7 @@ createDelayBuyAuto(itemsInLine, itemsInCol)
         animation-delay ($i + 1) * .2s
 .buyAuto
   padding 80px 0 50px
+  overflow hidden
 
   @media (max-width bTablet)
     padding 60px 0 40px
@@ -84,6 +85,10 @@ createDelayBuyAuto(itemsInLine, itemsInCol)
 
     @media (max-width bSmallestPhone)
       width 100%
+
+      for $i in (1..6)
+        &:nth-child({$i})
+          animation-delay ($i) * .1s
 
   &_icon
     width 100px

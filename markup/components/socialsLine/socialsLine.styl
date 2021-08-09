@@ -14,6 +14,7 @@ hoverSocials = {
   position relative
 
   width 100%
+  box-sizing border-box
   transition .2s all
 
   font-family OpenSans
@@ -40,6 +41,8 @@ hoverSocials = {
     align-items center
     justify-content space-between
     max-width ContentWidth
+    box-sizing border-box
+    width 100%
     margin 0 auto
     padding 20px 0
 
@@ -96,6 +99,10 @@ hoverSocials = {
 
     object-fit contain
     object-position center
+
+    &.-animate
+      animation-name fadeInDown50
+      animation-fill-mode forwards
 
     @media (max-width bSmallestPhone)
       display block
@@ -320,6 +327,12 @@ hoverSocials = {
 
     transition .2s all
     cursor pointer
+
+    animation-delay .6s
+
+    &.-animate
+      animation-name fadeInRight
+      animation-fill-mode forwards
 
     @media (max-width bSmallTablet)
       display flex

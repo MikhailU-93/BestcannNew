@@ -122,6 +122,10 @@ createDelayWhyWe(itemsInLine, itemsInCol)
     @media (max-width bSmallestPhone)
       width 100%
 
+      for $i in (1..6)
+        &:nth-child({$i})
+          animation-delay ($i) * .1s
+
   &_icon
     width 140px
     height 140px

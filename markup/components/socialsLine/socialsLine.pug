@@ -3,7 +3,7 @@ mixin socialsLine(data)
     .socialsLine_headLine
       .socialsLine_wrap
         img.socialsLine_logo.animateEl(src= data.logo, alt="")
-        img.socialsLine_mobileLogo(src= data.mobileLogo, alt="")
+        img.socialsLine_mobileLogo.animateEl(src= data.mobileLogo, alt="")
 
         .socialsLine_group
           span.socialsLine_time.animateEl Пн-Вс 09:00-22:00
@@ -19,7 +19,7 @@ mixin socialsLine(data)
             i.socialsLine_linkIcon
             span.socialsLine_linkName= data.mail
 
-        i.socialsLine_menuIcon
+        i.socialsLine_menuIcon.animateEl
           .socialsLine_line
           .socialsLine_line
           .socialsLine_line

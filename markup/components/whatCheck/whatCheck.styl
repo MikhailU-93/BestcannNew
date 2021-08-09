@@ -97,6 +97,8 @@ createDelay(itemsInLine, itemsInCol)
     fill main-color-2
     transition .2s all
 
+    animation-delay .2s
+
     @media (max-width bSmallestPhone)
       display block
       width 27px
@@ -107,9 +109,16 @@ createDelay(itemsInLine, itemsInCol)
 
     &.-prev
       left 0
+
+      &.-animate
+        animation-name fadeInLeft50
+        animation-fill-mode forwards
     
     &.-next
       right 0
+      &.-animate
+        animation-name fadeInRight50
+        animation-fill-mode forwards
 
   &_slider
     display block
@@ -172,6 +181,11 @@ createDelay(itemsInLine, itemsInCol)
 
     @media (max-width bSmallestPhone)
       margin-bottom 0
+
+      animation-delay .2s
+      &.-animate
+        animation-name fadeInLeft
+        animation-fill-mode forwards
 
   &_duplicate
     display flex

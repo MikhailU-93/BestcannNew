@@ -5,7 +5,7 @@ const el = document.querySelectorAll('picture');
 lozad(el).observe();
 
 $('body').on('click', '.js-scroll-to', function (e) {
-  e.preventDefault();
+  //e.preventDefault();
 
   let margin;
 
@@ -95,12 +95,22 @@ function useAnimation() {
   }
 }
 
-$(document).ready(function() {
-  selectNavLink();
-  useAnimation();
-});
-
-$(document).on('scroll', function() {
-  selectNavLink();
-  useAnimation();
-});
+if ($(window).width() > 767) {
+  $(document).ready(function() {
+    selectNavLink();
+    useAnimation();
+  });
+  
+  $(document).on('scroll', function() {
+    selectNavLink();
+    useAnimation();
+  });
+} else {
+  $(document).ready(function() {
+    selectNavLink();
+  });
+  
+  $(document).on('scroll', function() {
+    selectNavLink();
+  });
+}
