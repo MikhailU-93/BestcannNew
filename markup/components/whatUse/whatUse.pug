@@ -12,7 +12,7 @@ mixin whatUse(data)
             each item in data.items
               .whatUse_item.swiper-slide.animateEl
                 img.whatUse_photo(src= item.photo, alt="")
-                span.whatUse_infoGroup
+                .whatUse_infoGroup
                   h3.whatUse_name.subtitle= item.name
                   span.whatUse_info= item.info
 

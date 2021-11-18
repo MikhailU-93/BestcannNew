@@ -14,7 +14,7 @@ mixin whatCheck(data)
                 //- дубликат
                 .whatCheck_duplicate
                   div.whatCheck_photo
-                  span.whatCheck_nameWrap
+                  .whatCheck_nameWrap
                     h3.whatCheck_name.subtitle= item.name
                 //- оригинал
                 .whatCheck_flipper
@@ -25,7 +25,7 @@ mixin whatCheck(data)
                       source(type="image/webp" srcset="__static__img/assets/whatCheck/pic-1w.webp")
                       
                       img(src="__static__img/assets/whatCheck/pic-2j.jpeg")
-                    span.whatCheck_nameWrap
+                    .whatCheck_nameWrap
                       h3.whatCheck_name.subtitle= item.name
 
                   .whatCheck_back= item.info
