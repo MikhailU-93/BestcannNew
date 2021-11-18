@@ -3,9 +3,9 @@ mixin popupsServices(data)
     each item, index in data.items
       .popupsServices_item.popup-item(id =`popup-service-${index}`)
         img.popupsServices_photo(src= item.photo, alt="")
-        span.popupsServices_infoGroup
+        .popupsServices_infoGroup
           h3.popupsServices_title= item.name
-          span.popupsServices_text
+          .popupsServices_text
             p Lorem ipsum dolor sit amet consectetur adipisicing elit
             p Lorem ipsum dolor sit amet consectetur adipisicing elit
             ul Что входит в эту услугу:
