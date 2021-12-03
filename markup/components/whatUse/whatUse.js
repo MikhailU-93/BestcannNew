@@ -1,4 +1,4 @@
-// import $ from 'jquery';
+//import $ from 'jquery';
 // import Swiper from 'swiper';
 // import SwiperCore, {Pagination} from 'swiper/core';
 
@@ -37,10 +37,10 @@ const swiperWhatUse = new Swiper('.whatUse_slider', {
   }
 });
 
-$('.whatUse_btn.-next').on('click', function() {
+document.querySelector('.whatUse_btn.-next').addEventListener('click', function() {
   swiperWhatUse.slideNext();
 });
 
-$('.whatUse_btn.-prev').on('click', function() {
+document.querySelector('.whatUse_btn.-prev').addEventListener('click', function() {
   swiperWhatUse.slidePrev();
 });

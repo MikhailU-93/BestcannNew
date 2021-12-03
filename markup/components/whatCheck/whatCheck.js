@@ -1,63 +1,73 @@
-// import $ from 'jquery';
+//import $ from 'jquery';
 // import Swiper from 'swiper';
 // import SwiperCore, {Pagination} from 'swiper/core';
 
 // SwiperCore.use([Pagination]);
 
-if ($(window).width() < 480) {
-  $('.whatCheck_slider').addClass('swiper-container');
-  $('.whatCheck_items').addClass('swiper-wrapper');
-  $('.whatCheck_item').addClass('swiper-slide');
-
-  const swiperWhatCheck = new Swiper('.whatCheck_slider', {
-    slidesPerGroup: 1,
-    spaceBetween: 25,
-    loop: true,
-    speed: 500,
-    pagination: {
-      el: '.swiper-pagination',
-      bulletClass: 'swiper-pagination-bullet animateEl',
-      clickable: true,
-    },
-  });
-  
-  $('.whatCheck_btn.-next').on('click', function() {
-    swiperWhatCheck.slideNext();
-  });
-  
-  $('.whatCheck_btn.-prev').on('click', function() {
-    swiperWhatCheck.slidePrev();
-  });
-
-  swiperWhatCheck.on('slideChange', function() {
-    deleteClass();
-  })
+if (window.innerWidth > 480) {
+  document.querySelector('.whatCheck_slider').classList.remove('swiper-container');
+  document.querySelector('.whatCheck_items').classList.remove('swiper-wrapper');
+  document.querySelector('.whatCheck_item').classList.remove('swiper-slide');
 }
 
-const checkEl = $('.whatCheck_item');
+const swiperWhatCheck = new Swiper('.whatCheck_slider', {
+  slidesPerGroup: 1,
+  spaceBetween: 25,
+  loop: true,
+  speed: 500,
+  pagination: {
+    el: '.swiper-pagination',
+    bulletClass: 'swiper-pagination-bullet animateEl',
+    clickable: true,
+  },
+});
 
-function deleteClass(el = checkEl) {
-  el.removeClass('-hover');
+document.querySelector('.whatCheck_btn.-next').addEventListener('click', function() {
+  swiperWhatCheck.slideNext();
+});
+
+document.querySelector('.whatCheck_btn.-prev').addEventListener('click', function() {
+  swiperWhatCheck.slidePrev();
+});
+
+const checkElems = document.querySelectorAll('.whatCheck_item');
+
+function deleteClass() {
+  const activeElem = document.querySelector('.whatCheck_item.-hover');
+
+  if (!activeElem) {
+    return;
+  }
+  activeElem.classList.remove('-hover');
 }
 
-if (('ontouchstart' in $(window)) ||
+if (('ontouchstart' in window) ||
 (navigator.maxTouchPoints > 0) ||
 (navigator.msMaxTouchPoints > 0)) {
-  checkEl.on('touchstart', function () {
-    $(this).toggleClass('-hover');
+  // checkEl.on('touchstart', function () {
+  //   $(this).toggleClass('-hover');
+  // });
+  checkElems.forEach(element => {
+    element.addEventListener('touchstart', function() {
+      this.classList.toggle('-hover');
+    });
   });
 } else {
-  checkEl.hover(
-    function () {
-      deleteClass();
-      $(this).addClass('-hover');
-    },
-    function () {
-      deleteClass($(this));
-    }
-  );
+  checkElems.forEach(element => {
+    element.addEventListener('mouseover', function() {
+      this.classList.add('-hover');
+    });
+  
+    element.addEventListener('mouseout', function() {
+      this.classList.remove('-hover');
+    });
+  });
 }
 
-$(document).on('scroll', function() {
+document.addEventListener('scroll', function() {
+  deleteClass();
+});
+
+swiperWhatCheck.on('slideChange', function() {
   deleteClass();
 });

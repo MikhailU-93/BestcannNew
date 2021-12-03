@@ -1,4 +1,4 @@
-// import $ from 'jquery';
+//import $ from 'jquery';
 // import Swiper from 'swiper';
 // import SwiperCore, {Pagination} from 'swiper/core';
 
@@ -44,10 +44,10 @@ const swiperServices = new Swiper('.services_slider', {
   }
 });
 
-$('.services_btn.-next').on('click', function() {
+document.querySelector('.services_btn.-next').addEventListener('click', function() {
   swiperServices.slideNext();
 });
 
-$('.services_btn.-prev').on('click', function() {
+document.querySelector('.services_btn.-next').addEventListener('click', function() {
   swiperServices.slidePrev();
 });

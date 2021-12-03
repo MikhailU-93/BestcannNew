@@ -1,4 +1,4 @@
-// import $ from 'jquery';
+//import $ from 'jquery';
 // import Swiper from 'swiper';
 // import SwiperCore, {Pagination} from 'swiper/core';
 
@@ -35,10 +35,10 @@ const swiperComments = new Swiper('.comments_slider', {
   }
 });
 
-$('.comments_btn.-next').on('click', function() {
+document.querySelector('.comments_btn.-next').addEventListener('click', function() {
   swiperComments.slideNext();
 });
 
-$('.comments_btn.-prev').on('click', function() {
+document.querySelector('.comments_btn.-next').addEventListener('click', function() {
   swiperComments.slidePrev();
 });

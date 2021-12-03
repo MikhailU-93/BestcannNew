@@ -10,8 +10,8 @@ mixin socialsLine(data)
           .socialsLine_socials
             each social in data.socials
               a.socialsLine_social.animateEl(href= social)
-
-        .socialsLine_group
+        
+        .socialsLine_group.ml-a
           a.socialsLine_linkGroup.animateEl(href= data.tel)
             i.socialsLine_linkIcon
             span.socialsLine_linkName= data.tel
@@ -19,7 +19,7 @@ mixin socialsLine(data)
             i.socialsLine_linkIcon
             span.socialsLine_linkName= data.mail
 
-        .socialsLine_menuIcon.animateEl
+        .socialsLine_menuIcon.animateEl.toggle-menu-elem
           .socialsLine_line
           .socialsLine_line
           .socialsLine_line

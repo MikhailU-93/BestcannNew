@@ -4,10 +4,10 @@ mixin header(data)
       +socialsLine(socialsLine.main)
       
       .header_nav
-        i.header_close
+        i.header_close.toggle-menu-elem
         .header_navWrap
           nav.header_links
             each link, index in data.links
               a.header_navLink.animateEl.js-scroll-to(href= index)= link
 
-      .header_back
+      .header_back.toggle-menu-elem
