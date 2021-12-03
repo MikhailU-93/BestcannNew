@@ -7,7 +7,7 @@ mixin whatUse(data)
         != pugHelpers.Icon.call(locals, {iconName: 'arrow-left', className: 'whatUse_btn -prev animateEl', iconWidth: '35', iconHeight: '75'})
         
         != pugHelpers.Icon.call(locals, {iconName: 'arrow-right', className: 'whatUse_btn -next animateEl', iconWidth: '30', iconHeight: '20'})
-        .whatUse_slider.swiper-container
+        .whatUse_slider.swiper
           .whatUse_items.swiper-wrapper
             each item in data.items
               .whatUse_item.swiper-slide.animateEl

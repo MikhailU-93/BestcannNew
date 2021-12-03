@@ -7,7 +7,8 @@
   "devDependencies": {
     "gulp": "^4.0.2",
     "jquery": "^3.6.0",
-    "jquery.maskedinput": "^1.4.1"
+    "jquery.maskedinput": "^1.4.1",
+    "swiper": "^7.3.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,7 +19,6 @@
     "@babel/core": "^7.14.5",
     "@babel/preset-env": "^7.14.5",
     "imask": "^6.1.0",
-    "lozad": "^1.16.0",
-    "swiper": "^6.7.0"
+    "lozad": "^1.16.0"
   }
 }

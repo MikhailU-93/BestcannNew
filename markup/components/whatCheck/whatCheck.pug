@@ -7,7 +7,7 @@ mixin whatCheck(data)
         != pugHelpers.Icon.call(locals, {iconName: 'arrow-left', className: 'whatCheck_btn -prev animateEl', iconWidth: '35', iconHeight: '75'})
         
         != pugHelpers.Icon.call(locals, {iconName: 'arrow-right', className: 'whatCheck_btn -next animateEl', iconWidth: '30', iconHeight: '20'})
-        .whatCheck_slider.swiper-container
+        .whatCheck_slider.swiper
           .whatCheck_items.swiper-wrapper
             each item in data.items
               .whatCheck_item.animateEl.swiper-slide

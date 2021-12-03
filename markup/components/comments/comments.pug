@@ -7,7 +7,7 @@ mixin comments(data)
         != pugHelpers.Icon.call(locals, {iconName: 'arrow-left', className: 'comments_btn -prev animateEl', iconWidth: '35', iconHeight: '75'})
         
         != pugHelpers.Icon.call(locals, {iconName: 'arrow-right', className: 'comments_btn -next animateEl', iconWidth: '30', iconHeight: '20'})
-        .comments_slider.swiper-container
+        .comments_slider.swiper
           .comments_items.swiper-wrapper
             each item in data.items
               .comments_item.swiper-slide.animateEl
