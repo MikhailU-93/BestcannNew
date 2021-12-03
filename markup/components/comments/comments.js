@@ -3,8 +3,10 @@
 // import SwiperCore, {Pagination} from 'swiper/core';
 
 // SwiperCore.use([Pagination]);
+import Swiper, { Navigation, Pagination } from 'swiper';
 
 const swiperComments = new Swiper('.comments_slider', {
+  modules: [ Navigation, Pagination],
   loop: true,
   speed: 500,
   pagination: {

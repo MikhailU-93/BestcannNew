@@ -3,6 +3,7 @@
 // import SwiperCore, {Pagination} from 'swiper/core';
 
 // SwiperCore.use([Pagination]);
+import Swiper, { Navigation, Pagination } from 'swiper';
 
 if (window.innerWidth > 480) {
   document.querySelector('.whatCheck_slider').classList.remove('swiper-container');
@@ -11,6 +12,7 @@ if (window.innerWidth > 480) {
 }
 
 const swiperWhatCheck = new Swiper('.whatCheck_slider', {
+  modules: [Navigation, Pagination],
   slidesPerGroup: 1,
   spaceBetween: 25,
   loop: true,
