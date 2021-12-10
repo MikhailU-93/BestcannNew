@@ -8,7 +8,10 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 if (window.innerWidth > 480) {
   document.querySelector('.whatCheck_slider').classList.remove('swiper-container');
   document.querySelector('.whatCheck_items').classList.remove('swiper-wrapper');
-  document.querySelector('.whatCheck_item').classList.remove('swiper-slide');
+  // document.querySelectorAll('.whatCheck_item').classList.remove('swiper-slide');
+  document.querySelectorAll('.whatCheck_item').forEach(element => {
+    element.classList.remove('swiper-slide');
+  });
 }
 
 const swiperWhatCheck = new Swiper('.whatCheck_slider', {
@@ -32,7 +35,7 @@ document.querySelector('.whatCheck_btn.-prev').addEventListener('click', functio
   swiperWhatCheck.slidePrev();
 });
 
-const checkElems = document.querySelectorAll('.whatCheck_item');
+const checkContainer = document.querySelector('.whatCheck_items');
 
 function deleteClass() {
   const activeElem = document.querySelector('.whatCheck_item.-hover');
@@ -46,22 +49,27 @@ function deleteClass() {
 if (('ontouchstart' in window) ||
 (navigator.maxTouchPoints > 0) ||
 (navigator.msMaxTouchPoints > 0)) {
-  // checkEl.on('touchstart', function () {
-  //   $(this).toggleClass('-hover');
-  // });
-  checkElems.forEach(element => {
-    element.addEventListener('touchstart', function() {
-      this.classList.toggle('-hover');
-    });
+  checkContainer.addEventListener('touchstart', function(event) {
+    const elem = event.target.closest('.whatCheck_item');
+
+    if (!elem) {
+      return;
+    }
+
+    elem.classList.toggle('-hover');
   });
 } else {
-  checkElems.forEach(element => {
-    element.addEventListener('mouseover', function() {
-      this.classList.add('-hover');
-    });
-  
-    element.addEventListener('mouseout', function() {
-      this.classList.remove('-hover');
+  checkContainer.addEventListener('mouseover', function(event) {
+    const elem = event.target.closest('.whatCheck_item');
+
+    if (!elem) {
+      return;
+    }
+
+    elem.classList.add('-hover');
+
+    elem.addEventListener('mouseout', function(event) {
+      elem.classList.remove('-hover');
     });
   });
 }

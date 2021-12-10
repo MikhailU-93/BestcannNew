@@ -25,9 +25,10 @@ html(class="no-js", lang="ru")
   body.page
     |%=symbols=%
 
-    .wrap.section
+    .wrap.section(id='main')
       .video_wrap
-        video(src="/30.webm" autoplay='autoplay', loop='loop', muted='muted')
+        //- video(src='/30.webm' autoplay='autoplay', loop='loop', muted='muted')
+        
         picture
           source(media="(max-width: 639px)" type="image/webp" srcset="__static__img/general/header.webp")
           source(type="image/webp" srcset="__static__img/general/header.webp")
@@ -54,5 +55,6 @@ html(class="no-js", lang="ru")
     script(src='%=static=%js/separate-js/svg4everybody.min.js')
     script svg4everybody();
 
+    //- script(src='https://unpkg.com/swiper@7/swiper-bundle.min.js')
     //- Main scripts. You can replace it, but I recommend you to leave it here
     script(src='%=static=%js/main%=hash=%%=min=%.js')

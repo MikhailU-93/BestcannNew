@@ -3,29 +3,73 @@
 
 // $ = document.querySelectorAll;
 
+// Вставляем видео на разрешениях выше планшета
+if (window.innerWidth > 999) {
+  document.querySelector('.video_wrap').insertAdjacentHTML("afterbegin", "<video src='https://bestcarnn.ru/wp-content/themes/bestcarnn/Финал.webm' autoplay='autoplay' loop='loop' muted='muted'></video>");
+}
+
+// Переменные
 const pictures = document.querySelectorAll('picture');
+const header = document.querySelector('.header');
+const nav = document.querySelector('.header_nav');
+const headerBack = document.querySelector('.header_back');
+const menuIcon = document.querySelector('.socialsLine_menuIcon');
+const headerHeight = document.querySelector('.header_headLine').offsetHeight;
+const sections = document.querySelectorAll('.section');
+const sectionsPosInfo = [];
+const navLink = document.querySelectorAll('.header_navLink');
+const animatedSections = document.querySelectorAll('.animateSection');
+const windowHeight = window.innerHeight;
+
+// Вешаем ланивую загрузку на тэги Picture
 lozad(pictures).observe();
 
-document.querySelectorAll('.js-scroll-to').forEach(element => {
-  element.addEventListener('click', function(event) {
-    event.preventDefault();
-    const docScroll = window.pageYOffset;
-    const href = this.getAttribute('href').substr(1);
-    //console.log(href);
-    const section = document.querySelector(`[id="${href}"]`);
-    const sectionPos = section.getBoundingClientRect().top;
-    //console.log(section);
-    scrollTo(document.documentElement, sectionPos + docScroll, 500);
-    //document.documentElement.scrollTop = 0;
-  });
+// Переключение "активности" меню на мобилке
+function toggleMobileNav() {
+  nav.classList.toggle('-active');
+  headerBack.classList.toggle('-active');
+  menuIcon.classList.toggle('-active');
+}
+
+// Отключение "активности" меню (на всех платформах)
+function activeMobileNav() {
+  nav.classList.remove('-active');
+  headerBack.classList.remove('-active');
+  menuIcon.classList.remove('-active');
+}
+
+header.addEventListener('click', function(event) {
+  let toggleElemMenu = event.target.closest('.toggle-menu-elem');
+
+  if (!toggleElemMenu) {
+    return;
+  }
+
+  toggleMobileNav();
 });
 
-// document.querySelectorAll('.js-scroll-to')[1].addEventListener('click', function (event) {
-//   event.preventDefault();
-//   scrollTo(document.documentElement, 0, 700);
-//   //document.documentElement.scrollTop = 0;
-// })
+nav.addEventListener('click', function(event) {
+  let navLink = event.target.closest('.js-scroll-to');
 
+  if (!navLink) {
+    return;
+  }
+
+  event.preventDefault();
+  activeMobileNav();
+
+  let margin = (window.innerWidth > 999) ? 0 : 30;
+  const docScroll = window.pageYOffset;
+  const href = navLink.getAttribute('href').substr(1);
+  //console.log(href);
+  const section = document.querySelector(`[id="${href}"]`);
+  const sectionPos = section.getBoundingClientRect().top + docScroll - margin;
+  //console.log(section);
+  scrollTo(document.documentElement, sectionPos, 500);
+  //document.documentElement.scrollTop = 0;
+});
+
+// Функция анимирования скролла
 function scrollTo(element, to, duration) {
   const start = element.scrollTop;
   let change = to - start;
@@ -57,17 +101,137 @@ Math.easeInOutQuad = function (t, b, c, d) {
   return -c/2 * (t*(t-2) - 1) + b;
 };
 
-// document.querySelectorAll('.js-scroll-to').forEach(element => {
-//   element.addEventListener('click', function(event) {
-//     event.preventDefault();
 
-//     document.animate({
-//       scrollTop: 500
-//     }, 500);
-//   })
+// Липкое меню
+function stickyNav() {
+  const docScroll = window.pageYOffset;
+  
+  if (docScroll > headerHeight && nav.classList.contains('-sticky')) {
+    return;
+  } else if (docScroll < headerHeight) {
+    nav.classList.remove('-sticky');
+  } else {
+    nav.classList.add('-sticky');
+  }
+}
+
+// Добавляем 1му элементу меню выделение
+navLink[0].classList.add('-active');
+
+// Заполняем массив координатами секций из меню
+for (let i = 0; i < sections.length; i++) {
+  sectionsPosInfo.push(sections[i].getBoundingClientRect().top + window.pageYOffset);
+}
+sectionsPosInfo.push(sections[sections.length - 1].getBoundingClientRect().top + window.pageYOffset + 1000);
+
+// Выбор элемента навигации, соответствующего секции на экране
+function selectNavLink() {
+  const docScroll = window.pageYOffset;
+
+  for (let i = 0; i < sectionsPosInfo.length; i++) {
+    //console.log(docScroll, sectionsPosInfo[i] - 200);
+    if (docScroll <= sectionsPosInfo[i + 1] - 200) {
+      const activeNavLink = document.querySelector('.header_navLink.-active');
+
+      activeNavLink.classList.remove('-active');
+      navLink[i].classList.add('-active');
+      break;
+    }
+  }
+}
+
+// Анимирование элементов, до которых доскролил пользователь
+function useAnimation() {
+  //console.time();
+  for (let i = 0; i < animatedSections.length; i++) {
+    const section = animatedSections[i];
+    const sectionPos = section.getBoundingClientRect().top;
+    
+    if (windowHeight >= sectionPos) {
+      const animatedElems = section.querySelectorAll('.animateEl');
+
+      for (let j = 0; j < animatedElems.length; j++) {
+        const element = animatedElems[j];
+        const elemPos = element.getBoundingClientRect().top;
+        
+        if (windowHeight >= elemPos) {
+          element.classList.add('-animate');
+          continue;
+        }
+        break;
+      }
+      continue;
+    }
+    break;
+  }
+  //console.timeEnd();
+  //console.time();
+  // animatedSections.forEach(section => {
+  //   const sectionPos = section.getBoundingClientRect().top;
+
+  //   if (windowHeight >= sectionPos) {
+  //     // console.log(animatedSections[i], animatedSectionsPosInfo[i], windowHeight);
+  //     const animatedElems = section.querySelectorAll('.animateEl');
+
+  //     animatedElems.forEach(element => {
+  //       const elemPos = element.getBoundingClientRect().top;
+
+  //       if (windowHeight >= elemPos) {
+  //         element.classList.add('-animate');
+  //       }
+  //     });
+  //   }
+  // });
+  //console.timeEnd();
+}
+
+// Троттл-функция - обертка, тормозящая действие функций
+function throttle(func, ms) {
+  let isCooldown = false;
+  let lastFunc = func;
+
+  return function() {
+    if (isCooldown) {
+      return;
+    }
+
+    func();
+    isCooldown = true;
+
+    setTimeout(function() {
+      isCooldown = false;
+
+      if (lastFunc) {
+        func();
+      }
+    }, ms);
+  };
+}
+
+// Оборачиваем функции в тормозящую обертку
+let f1 = throttle(selectNavLink, 200);
+let f2 = throttle(useAnimation, 200);
+let f3 = throttle(stickyNav, 200);
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  f1();
+  f2();
+  f3();
+});
+
+document.addEventListener('scroll', function() {
+  f1();
+  f2();
+  f3();
+});
+
+// document.querySelector('.toggle-menu-elem').addEventListener('click', function () {
+//   document.querySelector('.header_nav').classList.toggle('-active');
+
+//   document.querySelector('.header_back').classList.toggle('-active');
+//   document.querySelector('.socialsLine_menuIcon').classList.toggle('-active');
 // });
-
-//document.documentElement.scrollTop = 500;
 
 // $('body').on('click', '.js-scroll-to', function (e) {
 //   e.preventDefault();
@@ -86,115 +250,3 @@ Math.easeInOutQuad = function (t, b, c, d) {
 //     'swing'
 //   );
 // });
-
-const navLink = document.querySelectorAll('.header_navLink');
-navLink[0].classList.add('-active');
-
-function selectNavLink() {
-  //console.log(1);
-  const docScroll = window.pageYOffset;
-  const sections = document.querySelectorAll('.section');
-  const activeNavLink = document.querySelector('.header_navLink.-active')
-  let sumOfheights = 0;
-
-  for (let i = 0; i < sections.length; i++) {
-    sumOfheights += sections[i].offsetHeight;
-
-    if (docScroll <= sumOfheights - 200) {
-      activeNavLink.classList.remove('-active');
-      navLink[i].classList.add('-active');
-      break;
-    }
-  }
-}
-
-const headerHeight = document.querySelector('.header_headLine').offsetHeight;
-const nav = document.querySelector('.header_nav');
-//console.log(headerHeight);
-
-function stickyNav() {
-  const docScroll = window.pageYOffset;
-  
-  if (docScroll > headerHeight) {
-    nav.classList.add('-sticky');
-  } else {
-    nav.classList.remove('-sticky');
-  }
-}
-
-function activeMobileNav() {
-  document.querySelector('.header_nav').classList.remove('-active');
-  document.querySelector('.header_back').classList.remove('-active');
-  document.querySelector('.socialsLine_menuIcon').classList.remove('-active');
-}
-
-document.querySelectorAll('.toggle-menu-elem').forEach(element => {
-  element.addEventListener('click', function() {
-    document.querySelector('.header_nav').classList.toggle('-active');
-
-    document.querySelector('.header_back').classList.toggle('-active');
-    document.querySelector('.socialsLine_menuIcon').classList.toggle('-active');
-  });
-});
-
-// document.querySelector('.toggle-menu-elem').addEventListener('click', function () {
-//   document.querySelector('.header_nav').classList.toggle('-active');
-
-//   document.querySelector('.header_back').classList.toggle('-active');
-//   document.querySelector('.socialsLine_menuIcon').classList.toggle('-active');
-// });
-
-if (window.innerWidth < 1000) {
-  document.addEventListener('scroll', function () {
-    activeMobileNav();
-  });
-} else {
-  document.addEventListener('DOMContentLoaded', function() {
-    stickyNav();
-  });
-  document.addEventListener('scroll', function () {
-    stickyNav();
-  });
-}
-
-function useAnimation() {
-  const animatedElems = document.querySelectorAll('.animateEl');
-  const docScroll = window.pageYOffset;
-  // console.log(animatedElems.length);
-  // console.log(window.innerHeight);
-  // console.log(animatedElems[52].getBoundingClientRect().top);
-
-  for (let i = 0; i < animatedElems.length; i++) {
-    const elem = animatedElems[i];
-    //console.log(el);
-    const windowHeight = window.innerHeight;
-    const elScrollPos = elem.getBoundingClientRect().top;
-    // console.log(elScrollPos[25]);
-    // console.log(elScrollPos[50]);
-    // console.log(elScrollPos);
-
-    if (windowHeight >= elScrollPos) {
-      elem.classList.add('-animate');
-    }
-  }
-}
-
-if (window.innerWidth > 767) {
-  document.addEventListener('DOMContentLoaded', function() {
-    selectNavLink();
-    useAnimation();
-  });
-  
-  document.addEventListener('scroll', function() {
-    selectNavLink();
-    useAnimation();
-  });
-} else {
-  document.addEventListener('DOMContentLoaded', function() {
-    selectNavLink();
-  });
-  
-  document.addEventListener('scroll', function() {
-    selectNavLink();
-  });
-}

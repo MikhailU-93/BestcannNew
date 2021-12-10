@@ -38,7 +38,7 @@
 
       background-color main-color-2
 
-      transition .2s all
+      transition .2s opacity
 
       opacity 0
       visibility hidden
@@ -52,6 +52,13 @@
       border-bottom 1px solid main-color-1
 
       background-color main-color-2
+
+      @media (max-width bSmallTablet)
+        position absolute
+        top auto
+        left 0
+        bottom 0
+        transform translateY(100%)
 
     &.-active
       opacity 1
@@ -68,6 +75,12 @@
 
     @media (max-width bSmallTablet)
       margin 0
+
+      background-color main-color-2
+
+  &_nav.-sticky &_navWrap
+    @media (max-width bSmallTablet)
+      border-bottom 1px solid main-color-1
 
   &_links
     display flex
