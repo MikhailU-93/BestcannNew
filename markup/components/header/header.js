@@ -213,18 +213,29 @@ let f1 = throttle(selectNavLink, 200);
 let f2 = throttle(useAnimation, 200);
 let f3 = throttle(stickyNav, 200);
 
-
-document.addEventListener('DOMContentLoaded', function() {
-  f1();
-  f2();
-  f3();
-});
-
-document.addEventListener('scroll', function() {
-  f1();
-  f2();
-  f3();
-});
+if (window.innerWidth > 767) {
+  document.addEventListener('DOMContentLoaded', function() {
+    f1();
+    f2();
+    f3();
+  });
+  
+  document.addEventListener('scroll', function() {
+    f1();
+    f2();
+    f3();
+  });
+} else {
+  document.addEventListener('DOMContentLoaded', function() {
+    f1();
+    f3();
+  });
+  
+  document.addEventListener('scroll', function() {
+    f1();
+    f3();
+  });
+}
 
 // document.querySelector('.toggle-menu-elem').addEventListener('click', function () {
 //   document.querySelector('.header_nav').classList.toggle('-active');

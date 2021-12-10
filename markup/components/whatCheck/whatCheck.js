@@ -57,7 +57,7 @@ if (('ontouchstart' in window) ||
     }
 
     elem.classList.toggle('-hover');
-  });
+  }, Modernizr.passiveeventlisteners ? {passive: true} : false);
 } else {
   checkContainer.addEventListener('mouseover', function(event) {
     const elem = event.target.closest('.whatCheck_item');
