@@ -9,9 +9,8 @@ mixin checkAuto(data)
       .checkAuto_main
         img.checkAuto_pic.animateEl(src="__static__img/assets/checkAuto/pic.png", alt="")
 
-        .checkAuto_formWrap.amimateEl
-
-          form.checkAuto_formWrap.animateEl(action="")
+        .checkAuto_formWrap.animateEl
+          form(action="")
             .checkAuto_inputGroup
               label.checkAuto_label(for="name-input") Ваше имя:
               input.checkAuto_input(id="name-input", type="text", placeholder="Владимир", name="Name", maxlength="15")
