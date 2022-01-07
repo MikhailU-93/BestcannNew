@@ -164,25 +164,6 @@ function useAnimation() {
     }
     break;
   }
-  //console.timeEnd();
-  //console.time();
-  // animatedSections.forEach(section => {
-  //   const sectionPos = section.getBoundingClientRect().top;
-
-  //   if (windowHeight >= sectionPos) {
-  //     // console.log(animatedSections[i], animatedSectionsPosInfo[i], windowHeight);
-  //     const animatedElems = section.querySelectorAll('.animateEl');
-
-  //     animatedElems.forEach(element => {
-  //       const elemPos = element.getBoundingClientRect().top;
-
-  //       if (windowHeight >= elemPos) {
-  //         element.classList.add('-animate');
-  //       }
-  //     });
-  //   }
-  // });
-  //console.timeEnd();
 }
 
 // Троттл-функция - обертка, тормозящая действие функций
@@ -236,28 +217,3 @@ if (window.innerWidth > 767) {
     f3();
   });
 }
-
-// document.querySelector('.toggle-menu-elem').addEventListener('click', function () {
-//   document.querySelector('.header_nav').classList.toggle('-active');
-
-//   document.querySelector('.header_back').classList.toggle('-active');
-//   document.querySelector('.socialsLine_menuIcon').classList.toggle('-active');
-// });
-
-// $('body').on('click', '.js-scroll-to', function (e) {
-//   e.preventDefault();
-
-//   let margin;
-
-//   if ($(window).width() > 999) {
-//     margin = 0;
-//   } else {
-//     margin = 30;
-//   }
-
-//   $('html, body').stop().animate(
-//     { scrollTop: $($(this).attr('href')).offset().top - margin },
-//     700,
-//     'swing'
-//   );
-// });

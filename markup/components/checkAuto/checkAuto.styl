@@ -138,11 +138,23 @@
     @media (max-width bSmallTablet)
       display none
 
+  &_formWrap
+    max-width 400px
+    width 100%
+
+    animation-delay .4s
+
+    &.-animate
+      animation-name fadeInRight
+      animation-fill-mode forwards
+
+    @media (max-width bSmallTablet)
+      max-width 350px
+
   & form
     display flex
     flex-direction column
     align-items center
-    max-width 400px
     width 100%
     box-sizing border-box
     padding 20px
@@ -153,19 +165,9 @@
 
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
 
-    animation-delay .4s
-
-    &.-animate
-      animation-name fadeInRight
-      animation-fill-mode forwards
 
     @media (max-width bTablet)
       box-shadow: 0 12px 24px rgba(0,0,0,0.25), 0 8px 8px rgba(0,0,0,0.22)
-
-    @media (max-width bSmallTablet)
-      max-width 350px
-
-      box-shadow: 0 10px 21px rgba(0,0,0,0.25), 0 7px 7px rgba(0,0,0,0.22)
 
     @media (max-width bPhone)
       padding 15px

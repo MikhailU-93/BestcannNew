@@ -9,20 +9,22 @@ mixin checkAuto(data)
       .checkAuto_main
         img.checkAuto_pic.animateEl(src="__static__img/assets/checkAuto/pic.png", alt="")
 
-        form.checkAuto_form.animateEl(action="")
-          .checkAuto_inputGroup
-            label.checkAuto_label(for="name-input") Ваше имя:
-            input.checkAuto_input(id="name-input", type="text", placeholder="Владимир", name="Name", maxlength="15")
-          .checkAuto_inputGroup
-            label.checkAuto_label(for="tel-input") <strong>*</strong> Ваш телефон:
-            input.checkAuto_input(id="tel-input", type="tel", placeholder="+79509509595", name="Tel" required)
-          .checkAuto_inputGroup
-            label.checkAuto_label(for="vin-input") Vin-код:
-            input.checkAuto_input(id="vin-input", type="text", placeholder="X7L5SRATG52858474", name="Vin" maxlength="17")
-          .checkAuto_inputGroup
-            label.checkAuto_label(for="link-input") <strong>*</strong> Ссылка на желаемый автомобиль:
-            input.checkAuto_input(id="link-input", type="url", placeholder="http://vashsite.ru", name="Link" required)
+        .checkAuto_formWrap.amimateEl
 
-          button.checkAuto_btn.formLink(type="submit") Отправить
+          form.checkAuto_formWrap.animateEl(action="")
+            .checkAuto_inputGroup
+              label.checkAuto_label(for="name-input") Ваше имя:
+              input.checkAuto_input(id="name-input", type="text", placeholder="Владимир", name="Name", maxlength="15")
+            .checkAuto_inputGroup
+              label.checkAuto_label(for="tel-input") <strong>*</strong> Ваш телефон:
+              input.checkAuto_input(id="tel-input", type="tel", placeholder="+79509509595", name="Tel" required)
+            .checkAuto_inputGroup
+              label.checkAuto_label(for="vin-input") Vin-код:
+              input.checkAuto_input(id="vin-input", type="text", placeholder="X7L5SRATG52858474", name="Vin" maxlength="17")
+            .checkAuto_inputGroup
+              label.checkAuto_label(for="link-input") <strong>*</strong> Ссылка на желаемый автомобиль:
+              input.checkAuto_input(id="link-input", type="url", placeholder="http://vashsite.ru", name="Link" required)
+
+            button.checkAuto_btn.formLink(type="submit") Отправить
       
       span.checkAuto_bottomNotice *Данная услуга является бесплатной для подписчиков группы <a href="#">ВКонтакте</a>
